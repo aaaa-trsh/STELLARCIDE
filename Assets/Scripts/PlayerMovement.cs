@@ -48,11 +48,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovementShip()
     {
-        playerRb.AddForce(transform.forward);
+        if (Input.GetKey(KeyCode.W))
+            playerRb.AddForce(transform.right * speed);
+           
+        else
+        {
+            playerRb.linearVelocity = playerRb.linearVelocity / 1.03f;
+        }
+        
     }
 
     private void HandleMovementMech()
     {
         playerRb.linearVelocity = new Vector2(horizontalMovement*speed, verticalMovement * speed);
+    }
+
+    public void SwapForm()
+    {
+        ship = !ship;
+    }
+
+    public void StopVelocity()
+    {
+        playerRb.linearVelocity = Vector2.zero;
     }
 }
