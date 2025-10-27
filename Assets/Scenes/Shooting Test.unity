@@ -439,9 +439,10 @@ GameObject:
   - component: {fileID: 974076397}
   - component: {fileID: 974076396}
   - component: {fileID: 974076399}
+  - component: {fileID: 974076400}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -550,6 +551,19 @@ MonoBehaviour:
   speed: 10
   turnSpeed: 20
   playerCam: {fileID: 102075939}
+--- !u!114 &974076400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974076391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b0ff47fc8a03c4a930a5635e5f5233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 5282619855539061698, guid: a00e8a32ec7e1224294c4aa2c7351693, type: 3}
 --- !u!1 &1080587199
 GameObject:
   m_ObjectHideFlags: 0
