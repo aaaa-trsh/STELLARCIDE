@@ -1,6 +1,7 @@
 using System;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody2D playerRb;
     
-    private bool _ship = true;
+    public bool ship = true;
     private bool _moving = false;
 
     private void Start()
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // if ship form
-        if (_ship) HandleMovementShip();
+        if (ship) HandleMovementShip();
         // if mech form
         else HandleMovementMech();
     }
@@ -136,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void SwapForm()
     {
-        _ship = !_ship;
+        ship = !ship;
     }
 
     public void StopVelocity()
