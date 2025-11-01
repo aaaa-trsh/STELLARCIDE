@@ -1,17 +1,29 @@
+using UnityEditor.EditorTools;
 using UnityEngine;
 /// <summary>
 /// Attach this to the player
 /// </summary>
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject projectile;
+    [SerializeField] private GameObject projectile;
+    [Tooltip("integer")] 
+    public int damageAmount;
+    public Damage.Type damageType;
+    [Tooltip("float")] 
+    public float projectileSpeed;
+    [Tooltip("In seconds")] 
+    public float projectileLifetime;
+    public bool projectilePierces;
 
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            ShootProjectile(new Damage(10, Damage.Type.PHYSICAL), 10, 3, true, gameObject);
+            ShootProjectile(
+                new Damage(damageAmount, damageType), projectileSpeed,
+                projectileLifetime, projectilePierces, gameObject
+            );
         }
     }
 
@@ -19,7 +31,7 @@ public class PlayerShooting : MonoBehaviour
     // doesnt really need to be its own function right now but enemies will eventually shoot as
     // well, so in the future, copy+paste this into a seperate component and call it in this
     // script
-    void ShootProjectile(Damage damage, int speed, float lifetime, bool piercing, GameObject owner)
+    void ShootProjectile(Damage damage, float speed, float lifetime, bool piercing, GameObject owner)
     {
         GameObject newProjectile = Instantiate(
             projectile,
