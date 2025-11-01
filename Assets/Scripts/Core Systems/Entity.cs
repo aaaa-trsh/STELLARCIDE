@@ -1,8 +1,10 @@
+using System;
+using Unity.VisualScripting;
+using UnityEditor.UI;
 using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
-    public HealthController healthController;
-    public HealthController.Team team => healthController.team;
-
+    [NonSerialized] public HealthOwner healthController;
+    public HealthOwner.Team team => healthController.team;
 }

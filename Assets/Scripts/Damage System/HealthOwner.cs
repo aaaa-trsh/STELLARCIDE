@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 /* TODO:
@@ -6,12 +7,12 @@ using UnityEngine;
 ++ 
 */
 
-public class HealthController
+public class HealthOwner : Component
 {
     public enum Team
     {
         PLAYER,
-        MONSTER,
+        ENEMY,
         DESTRUCTIBLE
     }
     public Team team;
@@ -19,9 +20,9 @@ public class HealthController
     public int hp;
     public int maxHP;
 
-    public Entity owner;
+    public GameObject owner;
 
-    public HealthController(int hp, Team team, Entity owner)
+    public HealthOwner(int hp, Team team, GameObject owner)
     {
         this.hp = hp;
         maxHP = hp;
@@ -33,14 +34,22 @@ public class HealthController
     {
         // heal on negatives & account for overhealth
         if (hp - damage.Amount > maxHP)
+        {
             hp = maxHP;
+            Debug.Log($"[HEALING] something on team {team} overhealed");
+        }
         else
+        {
             hp -= damage.Amount;
+            Debug.Log($"[DAMAGE] something on team {team} took {damage.Amount} of {damage.type} damage");
+        }
 
         if (hp > 0) return;
 
         hp = 0;
-        Debug.Log(owner.name + " died from taking " + damage.Amount + " pts of " + damage.type + " damage");
+        Debug.Log($"[DEATH] something on team {team} died from taking {damage.Amount} pts of {damage.type} damage");
+        Destroy(owner);
+
     }
 
     public void IncreaseMaxHP(int amount)

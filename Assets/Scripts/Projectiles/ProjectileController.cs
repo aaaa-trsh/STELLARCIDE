@@ -9,7 +9,7 @@ public class ProjectileController : MonoBehaviour
     public float lifetime;
     public bool piercing;
 
-    public Entity owner;
+    public GameObject owner;
 
     void Update()
     {
@@ -18,25 +18,23 @@ public class ProjectileController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Projectile")) return;
-        if (other.gameObject.CompareTag("Collideable")) Destroy(gameObject);
-        // check for player or enemy tag
-        if (other.gameObject.CompareTag("Entity"))
+        GameObject otherObject = other.gameObject;
+        if (otherObject.CompareTag("Projectile")) return;
+        if (otherObject.CompareTag("Collideable")) Destroy(gameObject);
+        // anything that has health is tagged Entity
+        if (otherObject.CompareTag("Entity"))
         {
-            if (owner.team == other.gameObject.GetComponent<Entity>().team) return;
-            PlayerController pc = other.gameObject.GetComponent<PlayerController>();
-            if (pc)
-            {
-                Debug.Log("hit player for " + damage.Amount); return;
-            }
-            EnemyController ec = other.gameObject.GetComponent<EnemyController>();
-            if (ec)
-            {
-                Debug.Log("hit enemy for " + damage.Amount);
-            }
+            // make sure the entity hit isnt on the same team
+            if (owner.GetComponent<Entity>().team == otherObject.GetComponent<Entity>().team) return;
+
+            if (otherObject.GetComponent<PlayerHealth>())
+                other.GetComponent<PlayerHealth>().healthController.TakeDamage(damage);
+            if (otherObject.GetComponent<EnemyHealth>())
+                other.GetComponent<EnemyHealth>().healthController.TakeDamage(damage);
         }
-        if (!piercing) Destroy(gameObject);
-        
+        if (piercing) return;
+        // projectile dies if entity on opposite team is hit AND doesnt pierce
+        Destroy(gameObject);
     }
 
     public void SetLifetime(float time)
