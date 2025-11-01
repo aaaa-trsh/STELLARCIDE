@@ -645,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9612a334fb3c55409c321bb7416fc9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &1080587199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277bd9af970ea884aaaa425d7afe8e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 30
 --- !u!60 &1630863104
 PolygonCollider2D:
   m_ObjectHideFlags: 0
