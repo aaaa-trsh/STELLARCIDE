@@ -1,20 +1,24 @@
-using System;
 using System.Collections;
 using UnityEngine;
-
+/// <summary>
+/// Attached to the projectile prefab this creates a projectile that travels stright
+/// and has customizable damage, speed, lifetime, and can pierce. It also stores the
+/// Gameobject owner that spawned this. 
+/// </summary>
 public class ProjectileController : MonoBehaviour
 {
     public Damage damage;
     public float speed;
     public float lifetime;
     public bool piercing;
-
     public GameObject owner;
+
 
     void Update()
     {
         transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0), Space.Self);
     }
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,22 +29,22 @@ public class ProjectileController : MonoBehaviour
         if (otherObject.CompareTag("Entity"))
         {
             // make sure the entity hit isnt on the same team
-            if (owner.GetComponent<Entity>().team == otherObject.GetComponent<Entity>().team) return;
+            if (owner.GetComponent<Entity>().healthController.team == otherObject.GetComponent<Entity>().healthController.team)
+                return;
 
-            if (otherObject.GetComponent<PlayerHealth>())
-                other.GetComponent<PlayerHealth>().healthController.TakeDamage(damage);
-            if (otherObject.GetComponent<EnemyHealth>())
-                other.GetComponent<EnemyHealth>().healthController.TakeDamage(damage);
+            other.GetComponent<Entity>().healthController.TakeDamage(damage);
         }
         if (piercing) return;
         // projectile dies if entity on opposite team is hit AND doesnt pierce
         Destroy(gameObject);
     }
 
+
     public void SetLifetime(float time)
     {
         StartCoroutine(Expire(time));
     }
+
 
     IEnumerator Expire(float time)
     {

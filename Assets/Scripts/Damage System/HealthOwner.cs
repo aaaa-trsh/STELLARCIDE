@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 /* TODO:
@@ -7,6 +6,11 @@ using UnityEngine;
 ++ 
 */
 
+/// <summary>
+/// Stores an entity's team type and HP. Come to definition to find
+/// all teams available and maybe add more. Also stores the entity
+/// owner itself
+/// </summary>
 public class HealthOwner : Component
 {
     public enum Team
@@ -16,12 +20,14 @@ public class HealthOwner : Component
         DESTRUCTIBLE
     }
     public Team team;
-
     public int hp;
     public int maxHP;
-
     public GameObject owner;
 
+
+    /// <param name="hp"> Integer value describing hitpoints </param>
+    /// <param name="team"> Can be from {Team.PLAYER, Team.ENEMY, Team.DESTRUCTIBLE} </param>
+    /// <param name="owner"> GameObject uses this component</param>
     public HealthOwner(int hp, Team team, GameObject owner)
     {
         this.hp = hp;
@@ -30,6 +36,12 @@ public class HealthOwner : Component
         this.owner = owner;
     }
 
+
+    /// <summary>
+    /// Subtract damage.amount from the owner's hp. Can also heal through negative numbers.
+    /// Entity will die when health reaches 0 and will not overheal.
+    /// </summary>
+    /// <param name="damage"> struct Damage(int amount, Type type) </param>
     public void TakeDamage(Damage damage)
     {
         // heal on negatives & account for overhealth
@@ -49,9 +61,13 @@ public class HealthOwner : Component
         hp = 0;
         Debug.Log($"[DEATH] something on team {team} died from taking {damage.Amount} pts of {damage.type} damage");
         Destroy(owner);
-
     }
 
+    /// <summary>
+    /// When increasing an entity's max hp by [int amount], their current hp amount relative to their new max hp
+    /// stays the same.
+    /// </summary>
+    /// <param name="amount"> A flat integer amount to increase the entity's maximum hit points by </param>
     public void IncreaseMaxHP(int amount)
     {
         float ratio = hp / maxHP;
