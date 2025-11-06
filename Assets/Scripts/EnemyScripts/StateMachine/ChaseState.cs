@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class ChaseState : IState
 {
-    float chaseSpeed = 8;
-    float loseDistance = 3;
+    float chaseSpeed = 3;
+    float loseDistance = 8;
 
     Transform myTransform;
     Transform target;
@@ -22,7 +22,7 @@ public class ChaseState : IState
         // Scouting out enemy
         if (PlayerLost())
         {
-            controller.ChangeState(controller.idleState);
+            controller.ChangeState(controller.scoutState);
         } else
         {
             Chase();

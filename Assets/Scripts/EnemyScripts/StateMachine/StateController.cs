@@ -12,6 +12,9 @@ public class StateController : MonoBehaviour
     public ShootState shootState = new ShootState();
 
     public Transform _player;
+    public Vector2 enemyToPlayerVector { get; private set; }
+    public Vector2 DirectionToPlayer { get; private set; }
+
 
     private void Start()
     {
@@ -32,6 +35,7 @@ public class StateController : MonoBehaviour
 
     void Update()
     {
+        enemyToPlayerVector = _player.position - transform.position;
         currentState.OnUpdate(this);
     }
 }

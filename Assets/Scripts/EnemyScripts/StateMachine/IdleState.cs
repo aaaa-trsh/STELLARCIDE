@@ -12,9 +12,9 @@ public class IdleState : IState
 
     public void OnUpdate(StateController controller)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (controller.enemyToPlayerVector.magnitude < 20)
         {
-            controller.ChangeState(controller.chaseState);
+            controller.ChangeState(controller.scoutState);
         }
     }
 
