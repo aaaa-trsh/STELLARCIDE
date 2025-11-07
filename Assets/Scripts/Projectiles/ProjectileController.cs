@@ -1,48 +1,50 @@
-using System;
 using System.Collections;
 using UnityEngine;
-
+/// <summary>
+/// Attached to the projectile prefab this creates a projectile that travels stright
+/// and has customizable damage, speed, lifetime, and can pierce. It also stores the
+/// Gameobject owner that spawned this. 
+/// </summary>
 public class ProjectileController : MonoBehaviour
 {
     public Damage damage;
     public float speed;
     public float lifetime;
     public bool piercing;
+    public GameObject owner;
 
-    public Entity owner;
 
     void Update()
     {
         transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0), Space.Self);
     }
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Projectile")) return;
-        if (other.gameObject.CompareTag("Collideable")) Destroy(gameObject);
-        // check for player or enemy tag
-        if (other.gameObject.CompareTag("Entity"))
+        GameObject otherObject = other.gameObject;
+        if (otherObject.CompareTag("Projectile")) return;
+        if (otherObject.CompareTag("Collideable")) Destroy(gameObject);
+        // anything that has health is tagged Entity
+        if (otherObject.CompareTag("Entity"))
         {
-            if (owner.team == other.gameObject.GetComponent<Entity>().team) return;
-            PlayerController pc = other.gameObject.GetComponent<PlayerController>();
-            if (pc)
-            {
-                Debug.Log("hit player for " + damage.Amount); return;
-            }
-            EnemyController ec = other.gameObject.GetComponent<EnemyController>();
-            if (ec)
-            {
-                Debug.Log("hit enemy for " + damage.Amount);
-            }
+            // make sure the entity hit isnt on the same team
+            if (owner.GetComponent<Entity>().healthController.team == otherObject.GetComponent<Entity>().healthController.team)
+                return;
+
+            other.GetComponent<Entity>().healthController.TakeDamage(damage);
         }
-        if (!piercing) Destroy(gameObject);
-        
+        if (piercing) return;
+        // projectile dies if entity on opposite team is hit AND doesnt pierce
+        Destroy(gameObject);
     }
+
 
     public void SetLifetime(float time)
     {
         StartCoroutine(Expire(time));
     }
+
 
     IEnumerator Expire(float time)
     {

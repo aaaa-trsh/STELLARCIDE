@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
+/// <summary>
+/// Class that PlayerHealth and EnemyHealth inherit from
+/// </summary>
 public abstract class Entity : MonoBehaviour
 {
-    public HealthController healthController;
-    public HealthController.Team team => healthController.team;
-
+    [NonSerialized] public HealthOwner healthController;
 }
