@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3228429747860222878}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.0038813055}
-  m_Radius: 0.10023245
+  m_Radius: 0.3
 --- !u!50 &-3228429747860222878
 Rigidbody2D:
   serializedVersion: 5

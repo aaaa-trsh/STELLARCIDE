@@ -11,7 +11,6 @@ namespace MapScripts
         private PolygonCollider2D outerCollider;
 
         // These multipliers will control how much to scale the polygon collider.
-        // You can adjust these if needed.
         [Range(0.8f, 0.95f)] public float innerScale = 0.9f;
         [Range(1.05f, 1.2f)] public float outerScale = 1.1f;
 

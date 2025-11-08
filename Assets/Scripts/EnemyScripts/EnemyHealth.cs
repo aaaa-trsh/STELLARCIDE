@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -5,10 +6,26 @@ using UnityEngine;
 /// </summary>
 public class EnemyHealth : Entity
 {
-    [SerializeField] private int health;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private EnemyHealthBar  healthBar;
     
     void Start()
     {
-        healthController = new HealthOwner(health, HealthOwner.Team.ENEMY, gameObject);
+        healthController = new HealthOwner(maxHealth, HealthOwner.Team.ENEMY, gameObject);
+        healthBar.UpdateHealthBar(healthController.hp, maxHealth);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Collided");
+        if (other.gameObject.TryGetComponent(out ProjectileController projectileController))
+        {
+            Debug.Log("Collided with projectile");
+            healthController.TakeDamage(projectileController.damage);
+            healthBar.UpdateHealthBar(healthController.hp, maxHealth);
+            
+            if(!projectileController.piercing)
+                Destroy(projectileController.gameObject);
+        }
     }
 }
