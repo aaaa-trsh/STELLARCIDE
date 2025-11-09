@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 /* TODO:
@@ -22,7 +23,14 @@ public class HealthOwner : Component
     public Team team;
     public int hp;
     public int maxHP;
+    // public HealthBar healthBar;
     public GameObject owner;
+
+
+    // void Start()
+    // {
+    //     healthBar.UpdateHealthBar(hp, maxHP);
+    // }
 
 
     /// <param name="hp"> Integer value describing hitpoints </param>
@@ -59,6 +67,7 @@ public class HealthOwner : Component
         if (hp > 0) return;
 
         hp = 0;
+        // healthBar.UpdateHealthBar(hp, maxHP);
         Debug.Log($"[DEATH] something on team {team} died from taking {damage.Amount} pts of {damage.type} damage");
         Destroy(owner);
     }
@@ -73,5 +82,6 @@ public class HealthOwner : Component
         float ratio = hp / maxHP;
         maxHP += amount;
         hp = Mathf.RoundToInt(ratio * maxHP);
+        // healthBar.UpdateHealthBar(hp, maxHP);
     }
 }

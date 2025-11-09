@@ -138,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
     public void SwapForm()
     {
         ship = !ship;
+        EventBus.Instance.ChangeForm(ship);
     }
 
     public void StopVelocity()
