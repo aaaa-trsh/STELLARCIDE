@@ -13,7 +13,7 @@ public class EventBus
     #region Actions
     public event Action<bool> OnFormChange;
     #endregion
-    
+
     #region Callers
     public void ChangeForm(bool isShip)
     {

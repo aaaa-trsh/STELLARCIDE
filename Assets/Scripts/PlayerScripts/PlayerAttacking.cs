@@ -11,13 +11,8 @@ public class PlayerAttacking : MonoBehaviour
     void Start()
     {
         BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
-        EventBus.Instance.OnFormChange += (isShip) =>
-        {
-            if (isShip)
-                BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
-            else
-                BaseAttack = new Punch(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f);
-        };
+        EventBus.Instance.OnFormChange += (isShip) => SwapBaseAttack(isShip);
+        
     }
 
     void Update()
@@ -32,6 +27,14 @@ public class PlayerAttacking : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+1, transform.position.x), new Vector3(1.5f, 1.5f, 1.5f));
+        Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y + 1, transform.position.x), new Vector3(1.5f, 1.5f, 1.5f));
+    }
+    
+    void SwapBaseAttack(bool isShip)
+    {
+        if (isShip)
+            BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
+        else
+            BaseAttack = new Punch(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f);
     }
 }

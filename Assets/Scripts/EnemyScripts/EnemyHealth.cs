@@ -17,15 +17,9 @@ public class EnemyHealth : Entity
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collided");
         if (other.gameObject.TryGetComponent(out ProjectileController projectileController))
         {
-            Debug.Log("Collided with projectile");
-            healthController.TakeDamage(projectileController.damage);
             healthBar.UpdateHealthBar(healthController.hp, maxHealth);
-            
-            if(!projectileController.piercing)
-                Destroy(projectileController.gameObject);
         }
     }
 }

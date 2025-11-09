@@ -99,10 +99,11 @@ GameObject:
   - component: {fileID: 3184979142112785570}
   - component: {fileID: 773835491157088703}
   - component: {fileID: 5407347406757031990}
-  - component: {fileID: 5730265248576297548}
+  - component: {fileID: 3812714273230022347}
+  - component: {fileID: 7683499854977400500}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +214,20 @@ MonoBehaviour:
   maxVelocity: 10
   playerCam: {fileID: 0}
   ship: 1
---- !u!114 &5730265248576297548
+--- !u!114 &3812714273230022347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890418029457023227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9612a334fb3c55409c321bb7416fc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &7683499854977400500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,9 +239,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b0ff47fc8a03c4a930a5635e5f5233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 5282619855539061698, guid: a00e8a32ec7e1224294c4aa2c7351693, type: 3}
-  damageAmount: 10
-  damageType: 0
-  projectileSpeed: 5
-  projectileLifetime: 5
-  projectilePierces: 1
