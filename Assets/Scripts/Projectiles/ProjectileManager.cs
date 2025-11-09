@@ -19,7 +19,6 @@ public class ProjectileManager : MonoBehaviour
                           Vector3 origin,
                           Vector3 target)
     {
-        Debug.Log("reached ProjectileManager.CreateProjectile()");
         GameObject newProjectile = Instantiate(
             projectile,
             origin + Vector3.forward * 100f,

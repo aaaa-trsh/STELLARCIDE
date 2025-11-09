@@ -749,6 +749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2289446539252765983, guid: d1b414849ed02784d86451cf6777fc75, type: 3}
+      propertyPath: m_TagString
+      value: Entity
+      objectReference: {fileID: 0}
     - target: {fileID: 2408391160103538541, guid: d1b414849ed02784d86451cf6777fc75, type: 3}
       propertyPath: playerCam
       value: 

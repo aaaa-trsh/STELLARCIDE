@@ -18,7 +18,6 @@ public class Punch : Attack
                                                                0);
         for (int i = 0; i < entitiesInRange.Length; i++)
         {
-            Debug.Log("stuff hit by punch: "+entitiesInRange);
             Entity other;
             try { other = entitiesInRange[i].GetComponent<Entity>(); } catch { other = null; }
                 

@@ -64,7 +64,7 @@ namespace MapScripts
             // Check which collider triggered
             if (innerCollider.IsTouching(other))
             {
-                Debug.Log($"{name}: Inner trigger entered by {other.name}");
+                // Debug.Log($"{name}: Inner trigger entered by {other.name}");
                 OnInnerEnter(other);
             }
         }
@@ -75,7 +75,7 @@ namespace MapScripts
         
             if (!outerCollider.IsTouching(other))
             {
-                Debug.Log($"{name}: Outer trigger exited by {other.name}");
+                // Debug.Log($"{name}: Outer trigger exited by {other.name}");
                 OnOuterExit(other);
             }
         }
