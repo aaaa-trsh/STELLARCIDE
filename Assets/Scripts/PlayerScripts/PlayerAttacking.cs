@@ -10,13 +10,13 @@ public class PlayerAttacking : MonoBehaviour
 
     void Start()
     {
-        BaseAttack = new Shoot(gameObject, Attack.Type.RANGED, new Damage(10, Damage.Type.PHYSICAL), 0.02f, 10, 2, true);
+        BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
         EventBus.Instance.OnFormChange += (isShip) =>
         {
             if (isShip)
-                BaseAttack = new Shoot(gameObject, Attack.Type.RANGED, new Damage(10, Damage.Type.PHYSICAL), 0.02f, 10, 2, true);
+                BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
             else
-                BaseAttack = new Punch(gameObject, Attack.Type.MELEE, new Damage(10, Damage.Type.PHYSICAL), 0.02f);
+                BaseAttack = new Punch(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f);
         };
     }
 
@@ -25,8 +25,13 @@ public class PlayerAttacking : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (BaseAttack.IsReady()) // check if in cooldown
-                Debug.Log("reached playerAttacking.cs");
                 CoroutineManager.Instance.Run(BaseAttack.Execute(gameObject.transform.position, gameObject.transform.right));
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+1, transform.position.x), new Vector3(1.5f, 1.5f, 1.5f));
     }
 }

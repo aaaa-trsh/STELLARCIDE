@@ -1,10 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-/* TODO:
-++ 
-*/
-
 public abstract class Attack
 {
     public GameObject Owner;
@@ -24,12 +20,10 @@ public abstract class Attack
     public float LastExecute;
 
     public Attack(GameObject owner,
-                  Type attackType,
                   Damage damage,
                   float cooldown)
     {
         Owner = owner;
-        AttackType = attackType;
         Damage = damage;
         Cooldown = cooldown;
     }
