@@ -7,12 +7,13 @@ using UnityEngine;
 public class PlayerAttacking : MonoBehaviour
 {
     [NonSerialized] public Attack BaseAttack;
+    private GameObject owner;
 
     void Start()
     {
-        BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
+        owner = gameObject;
+        BaseAttack = new Shoot(owner, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
         EventBus.Instance.OnFormChange += (isShip) => SwapBaseAttack(isShip);
-        
     }
 
     void Update()
@@ -20,7 +21,7 @@ public class PlayerAttacking : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (BaseAttack.IsReady()) // check if in cooldown
-                CoroutineManager.Instance.Run(BaseAttack.Execute(gameObject.transform.position, gameObject.transform.right));
+                CoroutineManager.Instance.Run(BaseAttack.Execute(owner.transform.position, owner.transform.right));
         }
     }
 
@@ -33,8 +34,8 @@ public class PlayerAttacking : MonoBehaviour
     void SwapBaseAttack(bool isShip)
     {
         if (isShip)
-            BaseAttack = new Shoot(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
+            BaseAttack = new Shoot(owner, new Damage(10, Damage.Type.PHYSICAL), 1f, 10, 2, true);
         else
-            BaseAttack = new Punch(gameObject, new Damage(10, Damage.Type.PHYSICAL), 1f);
+            BaseAttack = new Punch(owner, new Damage(10, Damage.Type.PHYSICAL), 1f);
     }
 }
