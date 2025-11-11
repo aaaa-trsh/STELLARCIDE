@@ -1,6 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+
+/// <summary>
+/// Abstract base object for attacks. Notes: attributes aren't final feel free to add more,
+/// please keep attack scripts in same directory.
+/// </summary>
 public abstract class Attack
 {
     public GameObject Owner;
@@ -19,6 +24,12 @@ public abstract class Attack
     protected Type AttackType;
     public float LastExecute;
 
+    /// <summary>
+    /// Basically never used
+    /// </summary>
+    /// <param name="owner"></param>
+    /// <param name="damage"></param>
+    /// <param name="cooldown"></param>
     public Attack(GameObject owner,
                   Damage damage,
                   float cooldown)
@@ -28,17 +39,22 @@ public abstract class Attack
         Cooldown = cooldown;
     }
 
+    /// <summary>
+    /// Abstract base method for firing an attack. New Attack objects should *always* override this.
+    /// </summary>
+    /// <param name="origin">World position of where to fire the attack from</param>
+    /// <param name="target">World position of where to fire the attack to</param>
     public virtual IEnumerator Execute(Vector3 origin, Vector3 target)
     {
-        Debug.Log("reached Attack.Execute()");
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();
     }
 
+    /// <returns>True if cooldown is down. False if cooldown is still counting</returns>
     public bool IsReady()
     {
         return LastExecute + Cooldown < Time.time;
     }
 
-    
+
 }
