@@ -352,8 +352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2662685468591573333}
-  target: {fileID: 6586736499228705972}
-  offset: {x: 0, y: 8, z: 0}
+  target: {fileID: 1974591656475070048}
+  offset: {x: 0, y: 0.8, z: 0}
 --- !u!114 &2662685468591573333
 MonoBehaviour:
   m_ObjectHideFlags: 0
