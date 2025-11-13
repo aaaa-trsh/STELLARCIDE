@@ -1,13 +1,24 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class ShootState : IState
 {
-    float timeBetweenAttacks = 5;
+    public Attack shoot;
+    private GameObject self;
 
     public void OnEntry(StateController controller)
     {
         // This will be called when first entering the state
         UnityEngine.Debug.Log("entering shooting state");
+
+        self = controller.gameObject;
+        shoot = new Shoot(self,
+            damage: new Damage(10, Damage.Type.PHYSICAL),
+            cooldown: 1f,
+            travelSpeed: 10,
+            lifetime: 2,
+            piercing: true
+        );
     }
 
     public void OnUpdate(StateController controller)
@@ -20,12 +31,7 @@ public class ShootState : IState
             controller.ChangeState(controller.chaseState);
         }
         // Scouting out enemy
-        if (timeBetweenAttacks < 0)
-        {
-            timeBetweenAttacks = 10;
-            UnityEngine.Debug.Log("pew");
-        }
-        timeBetweenAttacks -= Time.deltaTime;
+        controller.attackPlayer(shoot);
     }
 
     public void OnExit(StateController controller)
