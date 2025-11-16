@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,8 +18,8 @@ public class EnemyHealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = _camera.transform.rotation;
-        transform.position = target.position + offset;
+        transform.parent.rotation = _camera.transform.rotation;
+        transform.parent.position = target.position + offset;
     }
 
     public void UpdateHealthBar(float currentHealth, float maxHealth)

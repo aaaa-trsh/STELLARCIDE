@@ -31,8 +31,16 @@ public class ProjectileController : MonoBehaviour
             // make sure the entity hit isnt on the same team
             if (owner.GetComponent<Entity>().healthController.team == otherObject.GetComponent<Entity>().healthController.team)
                 return;
-
+            
+            // deal damage
             other.GetComponent<Entity>().healthController.TakeDamage(damage);
+            
+            // update health
+            if (other.TryGetComponent(out EnemyHealth enemyHealth))
+            {
+                enemyHealth.healthBar.UpdateHealthBar(other.GetComponent<Entity>().healthController.hp,
+                    other.GetComponent<Entity>().healthController.maxHP);
+            }
         }
         if (piercing) return;
         // projectile dies if entity on opposite team is hit AND doesnt pierce

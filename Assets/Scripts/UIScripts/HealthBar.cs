@@ -1,29 +1,23 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Slider healthBar;
+    public float maxHealth;
     
-    [Header("Rotation References")]
-    [SerializeField] private Transform target;
-    private Camera _camera;
-    [SerializeField] private Vector3 offset;
+    [Header("References")]
+    [SerializeField] private Slider healthBar;
+    [SerializeField] private PlayerHealth playerHealth;
 
-    private void Awake()
+    private void Start()
     {
-        _camera = Camera.main;
+        maxHealth = playerHealth.healthController.maxHP;
+        healthBar.maxValue = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        transform.rotation = _camera.transform.rotation;
-        transform.position = target.position + offset;
-    }
-
-    public void UpdateHealthBar(float currentHealth, float maxHealth)
-    {
-        healthBar.value = currentHealth/maxHealth;
+        healthBar.value = (float) playerHealth.healthController.hp / playerHealth.healthController.maxHP;
     }
 }

@@ -1,7 +1,4 @@
-using System;
-using System.Numerics;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -26,12 +23,6 @@ public class PlayerMovement : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         // if ship form
@@ -52,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         // Constant Turn Rate
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
         
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.Space))
         {
             playerRb.AddForce(transform.right * speed);
             
@@ -115,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
             direction = (Vector2)playerCam.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
             direction.Normalize(); 
 
-            // Get the tangent (perpendicular) direction
+            // Get the tangent direction
             Vector2 tangent = new Vector2(-direction.y, direction.x);
 
             // If moving right instead of left, flip tangent

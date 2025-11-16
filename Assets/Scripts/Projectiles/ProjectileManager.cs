@@ -7,7 +7,7 @@ public class ProjectileManager : MonoBehaviour
     void Start()
     {
         GameManager.Instance.ProjectileManager = this;
-        projectile = (GameObject)Resources.Load("Prefabs/Projectile", typeof(GameObject));
+        projectile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/Projectile", typeof(GameObject));
     }
 
     public void CreateProjectile(GameObject owner,
