@@ -3548,46 +3548,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5108155307476787186, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7996320319197501839, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1971349350}
-    - target: {fileID: 8797113400631551818, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
-      propertyPath: mechTransitionLayer.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 490058913558637734, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1411183596}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
---- !u!1 &1411183595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 490058913558637734, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
-  m_PrefabInstance: {fileID: 1411183594}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1411183596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411183595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769cda19035c4af47b050cfa698703c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  acceleration: 7
-  dragFactor: 25
 --- !u!1 &1565551087
 GameObject:
   m_ObjectHideFlags: 0

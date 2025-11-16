@@ -1,9 +1,6 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
-
-public enum MovementMode {
+public enum PlayerMode {
     SHIP, MECH
 }
 
@@ -19,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float mechCameraDist = 2;
     [SerializeField] private LayerMask mechTransitionLayer;
 
-    private MovementMode currentMode = MovementMode.SHIP;
+    private PlayerMode currentMode = PlayerMode.SHIP;
     
     private float targetCameraDistance;
     private float initialCamTargetDist = 0;
@@ -27,7 +24,6 @@ public class PlayerController : MonoBehaviour
 
     private ShipMovement shipMovement;
     private MechMovement mechMovement;
-
 
     private Vector3 cursor;
     private Vector3 cursorOffset;
@@ -47,11 +43,11 @@ public class PlayerController : MonoBehaviour
         cursorOffset = cursor - transform.position;
 
         // handle movement modes
-        if (currentMode == MovementMode.SHIP) {
+        if (currentMode == PlayerMode.SHIP) {
             shipMovement.enabled = true;
             mechMovement.enabled = false;
             HandleShipControls();
-        } else if (currentMode == MovementMode.MECH) {
+        } else if (currentMode == PlayerMode.MECH) {
             shipMovement.enabled = false;
             mechMovement.enabled = true;
             HandleMechControls();
@@ -107,13 +103,17 @@ public class PlayerController : MonoBehaviour
     // very simple state transitions
     void OnTriggerEnter2D(Collider2D other) {
         if ((mechTransitionLayer & (1 << other.gameObject.layer)) != 0) {
-            currentMode = MovementMode.MECH;
+            currentMode = PlayerMode.MECH;
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if ((mechTransitionLayer & (1 << other.gameObject.layer)) != 0) {
-            currentMode = MovementMode.SHIP;
+            currentMode = PlayerMode.SHIP;
         }
+    }
+
+    public PlayerMode GetPlayerMode() {
+        return currentMode;
     }
 }
