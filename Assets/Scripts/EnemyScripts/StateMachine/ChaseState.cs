@@ -9,12 +9,21 @@ public class ChaseState : IState
     Transform myTransform;
     Transform target;
 
+    public Attack punch;
+    private GameObject self;
+
     public void OnEntry(StateController controller)
     {
         // This will be called when first entering the state
         UnityEngine.Debug.Log("Entering chase state");
         myTransform = controller.transform;
         target = controller._player;
+
+        self = controller.gameObject;
+        punch = new Punch(self,
+            damage: new Damage(10, Damage.Type.PHYSICAL), 
+            cooldown: 5f
+        );
     }
 
     public void OnUpdate(StateController controller)
@@ -26,6 +35,11 @@ public class ChaseState : IState
         } else
         {
             Chase();
+        }
+
+        if (controller.distanceToPlayer < 1)
+        {
+            controller.attackPlayer(punch);
         }
     }
 

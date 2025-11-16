@@ -1,4 +1,5 @@
 using System.ComponentModel.Design;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -12,8 +13,9 @@ public class StateController : MonoBehaviour
     public ShootState shootState = new ShootState();
 
     public Transform _player;
+
     public Vector2 enemyToPlayerVector { get; private set; }
-    public Vector2 DirectionToPlayer { get; private set; }
+    public float distanceToPlayer { get; private set; }
 
 
     private void Start()
@@ -36,6 +38,16 @@ public class StateController : MonoBehaviour
     void Update()
     {
         enemyToPlayerVector = _player.position - transform.position;
+        distanceToPlayer = enemyToPlayerVector.magnitude;
         currentState.OnUpdate(this);
+    }
+
+    public void attackPlayer(Attack attack)
+    {
+        if (attack.IsReady())
+        {
+            UnityEngine.Debug.Log("attacking");
+            CoroutineManager.Instance.Run(attack.Execute(transform.position, enemyToPlayerVector));
+        }
     }
 }
