@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
@@ -6,43 +5,23 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float speed, acceleration;
     [SerializeField] private float swingReduceFactor;
     [SerializeField] private float driftReduceFactor;
-    [SerializeField] private float thrustCamSpeed = 5;
+    [SerializeField] private float boost = 5;
 
     private Rigidbody2D rb;
-    
-    private float thrustInput;
     private Vector2 wish;
-
-    private ClampedFollower camTarget;
-    private float initialCamTargetDist = 0;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-        camTarget = GetComponentInChildren<ClampedFollower>();
-        initialCamTargetDist = camTarget.maxDistance;
     }
 
     void Update() {
-        thrustInput = Input.GetKey(KeyCode.Space) ? 1 : 0;
-        wish = transform.right * thrustInput;
-
         if (Input.GetKeyDown(KeyCode.R)) {
             transform.position = Vector3.zero;
             rb.linearVelocity = Vector3.zero;
         }
+    }
 
-        // turn towards cursor
-        Vector3 cursor = CursorUtil.GetCursorPosition();
-        Vector3 direction = cursor - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);        
-        
-        if (thrustInput > 0) {   
-            camTarget.maxDistance = Mathf.Lerp(camTarget.maxDistance, initialCamTargetDist, Time.deltaTime * thrustCamSpeed);
-        } else {
-            camTarget.maxDistance = Mathf.Lerp(camTarget.maxDistance, 0, Time.deltaTime * thrustCamSpeed);;
-        }
-
+    void FixedUpdate() {
         ApplySwingReduction();
         ApplyDriftReduction();
         ApplyControlAcceleration();
@@ -51,7 +30,7 @@ public class ShipMovement : MonoBehaviour
     void ApplySwingReduction() {       
         // add drag to the component of velocity that is not along the ships forward axis
         Vector2 swingReduction = -swingReduceFactor * Time.deltaTime * (rb.linearVelocity - (Vector2)transform.right * Vector2.Dot(transform.right, rb.linearVelocity));
-        if (thrustInput != 0 && rb.linearVelocity.magnitude > 0.3) {
+        if (wish.magnitude != 0 && rb.linearVelocity.magnitude > 0.3) {
             rb.linearVelocity += swingReduction;
         }
     }
@@ -59,7 +38,7 @@ public class ShipMovement : MonoBehaviour
     void ApplyDriftReduction() {
         //if the ship is hurling away from the cursor, boost it a bit
         float dot = Vector2.Dot(rb.linearVelocity.normalized, wish);
-        if (thrustInput != 0 && dot < 0) {
+        if (wish.magnitude != 0 && dot < 0) {
             rb.linearVelocity += wish * Mathf.Abs(dot) * driftReduceFactor;
         }
     }
@@ -74,4 +53,6 @@ public class ShipMovement : MonoBehaviour
             rb.linearVelocity += accelSpeed * wish;
         }
     }
+
+    public void SetWishDirection(Vector2 _wish) { wish = _wish; }
 }
