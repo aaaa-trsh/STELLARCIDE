@@ -33,6 +33,13 @@ public class Punch : Attack
             {
                 other.healthController.TakeDamage(Damage);
             }
+            
+            // update health bar
+            if (other && other.TryGetComponent(out EnemyHealth enemyHealth))
+            {
+                enemyHealth.healthBar.UpdateHealthBar(other.GetComponent<Entity>().healthController.hp,
+                    other.GetComponent<Entity>().healthController.maxHP);
+            }
         }
 
 
