@@ -12,7 +12,7 @@ public class CursorUtil : MonoBehaviour
         );
     }
 
-    void LateUpdate() {
+    void FixedUpdate() {
         Cursor.visible = false;
         transform.position = GetCursorPosition();
     }
