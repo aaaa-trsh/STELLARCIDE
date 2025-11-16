@@ -1,3 +1,4 @@
+using System.Numerics;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector2 = UnityEngine.Vector2;
@@ -5,10 +6,14 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement Variables")]
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private float turnSpeed =  20f;
+    [Header("Movement Variables")] [SerializeField]
+    private float speed = 10f;
+
+    [SerializeField] private float turnSpeed = 20f;
     [SerializeField] private float maxVelocity = 10f;
+    
+    [Tooltip("Determines how many times less Mech speed is compared to Max Velocity")]
+    [SerializeField] private float mechMovementReductionCoefficient = 2f;
     
     [Header("References")]
     [SerializeField] private Camera playerCam;
@@ -78,47 +83,34 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-        
-        Vector2 forward = transform.right; // forward
-        Vector2 velocity = new Vector2(maxVelocity/2, 0);
 
         _moving = false;
-        
+
+        Vector2 velocity = Vector2.zero;
+
         if (Input.GetKey(KeyCode.W))
         {
-            direction = (Vector2)playerCam.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-            direction.Normalize();
-            // move in direction by speed
-            playerRb.linearVelocity = direction * speed/2; // move in direction by speed
-            // now moving
+            velocity += new Vector2(0, maxVelocity / mechMovementReductionCoefficient);
             _moving = true;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            direction = (Vector2)playerCam.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-            direction.Normalize();
-            playerRb.linearVelocity = -direction * speed/2; // move in opposite direction by speed
-            // now moving
+            velocity += new Vector2(0, -maxVelocity / mechMovementReductionCoefficient);
             _moving = true;
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            direction = (Vector2)playerCam.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-            direction.Normalize(); 
-
-            // Get the tangent direction
-            Vector2 tangent = new Vector2(-direction.y, direction.x);
-
-            // If moving right instead of left, flip tangent
-            if (Input.GetKey(KeyCode.D))
-                tangent = -tangent;
-
-            // Apply movement
-            playerRb.linearVelocity = tangent * speed;
-
+            velocity += new Vector2(maxVelocity / mechMovementReductionCoefficient, 0);
             _moving = true;
         }
-
+        else if (Input.GetKey(KeyCode.A))
+        {
+            velocity += new Vector2(-maxVelocity / mechMovementReductionCoefficient, 0);
+            _moving = true;
+        }
+        
+        playerRb.linearVelocity = velocity;
+        
         if (!_moving)
         {
             playerRb.linearVelocity = Vector2.zero;
