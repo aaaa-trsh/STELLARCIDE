@@ -40,8 +40,29 @@ public class PlayerAttacking : MonoBehaviour
     // punch hitbox vizualizer 
     void OnDrawGizmos()
     {
+        // punch hitbox holy shit
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y + 1, transform.position.x), new Vector3(1.5f, 1.5f, 1.5f));
+        Vector3[] points = new Vector3[4]
+        {
+          transform.localPosition + (2 * transform.right) + (0.75f * transform.up), // top right
+          transform.localPosition + (2 * transform.right) - (0.75f * transform.up), // top left
+          transform.localPosition - (0.75f * transform.up), // bot left
+          transform.localPosition + (0.75f * transform.up), // bot right
+        };
+        Vector3[] faces = new Vector3[8]
+        {
+            points[0], points[1],
+            points[1], points[2],
+            points[2], points[3],
+            points[3], points[0],
+        };
+        Gizmos.DrawLineList(faces);
+
+        // dash prediction
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y, transform.position.z), 
+            new Vector3(1, 10, 1)
+        );
     }
     
 

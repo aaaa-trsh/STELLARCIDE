@@ -104,12 +104,14 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if ((mechTransitionLayer & (1 << other.gameObject.layer)) != 0) {
             currentMode = PlayerMode.MECH;
+            EventBus.Instance.ChangeForm(false);
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if ((mechTransitionLayer & (1 << other.gameObject.layer)) != 0) {
             currentMode = PlayerMode.SHIP;
+            EventBus.Instance.ChangeForm(true);
         }
     }
 

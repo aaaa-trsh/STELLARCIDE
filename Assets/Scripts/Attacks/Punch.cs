@@ -1,5 +1,4 @@
 using System.Collections;
-using System.IO;
 using UnityEngine;
 
 public class Punch : Attack
@@ -21,9 +20,11 @@ public class Punch : Attack
 
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
-        Collider2D[] entitiesInRange = Physics2D.OverlapBoxAll(new Vector2(origin.x, origin.y + 1),
-                                                               new Vector2(1.5f, 1.5f),
-                                                               0);
+        Collider2D[] entitiesInRange = Physics2D.OverlapAreaAll(
+            Owner.transform.localPosition + (2f * Owner.transform.right) + (0.75f * Owner.transform.up), 
+            Owner.transform.localPosition - (0.75f * Owner.transform.up)
+        );
+
         for (int i = 0; i < entitiesInRange.Length; i++)
         {
             Entity other;
