@@ -17,7 +17,7 @@ public class PlayerAttacking : MonoBehaviour
         BaseAttack = new Shoot(self,
             damage: new Damage(10, Damage.Type.PHYSICAL),
             cooldown: 1f,
-            travelSpeed: 10,
+            travelSpeed: 30,
             lifetime: 2,
             piercing: true
         );
@@ -52,7 +52,7 @@ public class PlayerAttacking : MonoBehaviour
             BaseAttack = new Shoot(self,
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 1f,
-                travelSpeed: 10,
+                travelSpeed: 30,
                 lifetime: 2,
                 piercing: true
             ); 
