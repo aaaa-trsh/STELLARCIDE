@@ -13,6 +13,7 @@ public class StateController : MonoBehaviour
     public ShootState shootState = new ShootState();
 
     public Transform _player;
+    public SpriteRenderer sprite;
 
     public Vector2 enemyToPlayerVector { get; private set; }
     public float distanceToPlayer { get; private set; }
@@ -21,6 +22,7 @@ public class StateController : MonoBehaviour
     private void Start()
     {
         _player = FindFirstObjectByType<PlayerMovement>().transform;
+        sprite = GetComponentInChildren<SpriteRenderer>();
         ChangeState(idleState);
     }
 
@@ -46,7 +48,7 @@ public class StateController : MonoBehaviour
     {
         if (attack.IsReady())
         {
-            UnityEngine.Debug.Log("attacking");
+            //UnityEngine.Debug.Log("attacking");
             CoroutineManager.Instance.Run(attack.Execute(transform.position, enemyToPlayerVector));
         }
     }

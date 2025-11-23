@@ -17,7 +17,7 @@ public class ShootState : IState
             cooldown: 1f,
             travelSpeed: 10,
             lifetime: 2,
-            piercing: true
+            piercing: false
         );
     }
 
