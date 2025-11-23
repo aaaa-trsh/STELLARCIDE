@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ChaseState : IState
 {
-    float chaseSpeed = 3;
+    float chaseSpeed = 5;
     float loseDistance = 8;
 
     Transform myTransform;
