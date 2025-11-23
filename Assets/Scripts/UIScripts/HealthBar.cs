@@ -4,20 +4,21 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public float maxHealth;
+    public HealthOwner health;
     
     [Header("References")]
     [SerializeField] private Slider healthBar;
-    [SerializeField] private PlayerHealth playerHealth;
+    //[SerializeField] private PlayerHealth playerHealth;
 
     private void Start()
     {
-        maxHealth = playerHealth.healthController.maxHP;
-        healthBar.maxValue = maxHealth;
+        //maxHealth = playerHealth.healthController.maxHP;
+        health = GameManager.Instance.Player.GetComponent<PlayerHealth>().healthController;
+        healthBar.maxValue = health.maxHP;
     }
 
     private void Update()
     {
-        healthBar.value = (float) playerHealth.healthController.hp / playerHealth.healthController.maxHP;
+        healthBar.value = (float) health.hp;
     }
 }
