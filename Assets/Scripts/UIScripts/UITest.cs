@@ -5,12 +5,14 @@ public class UITest : MonoBehaviour
 {
     public GameObject mainMenu;
     public bool mainMenuActive = true;
+    public AudioSource click;
     void Awake()
     {
         Time.timeScale = 0f;
     }
-    public void test()
+    public void Play()
     {
+        click.Play();
         Debug.Log("This is a test script for UI.");
         Time.timeScale = 1f;
         mainMenu.SetActive(false);
