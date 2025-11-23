@@ -43,13 +43,13 @@ public class HealthOwner : Component
         this.owner = owner;
     }
 
-
     /// <summary>
     /// Subtract damage.amount from the owner's hp. Can also heal through negative numbers.
     /// Entity will die when health reaches 0 and will not overheal.
     /// </summary>
     /// <param name="damage"> struct Damage(int amount, Type type) </param>
-    public void TakeDamage(Damage damage)
+    /// <returns> True if the healthowner dies as a result of this damage </returns>
+    public bool TakeDamage(Damage damage)
     {
         // heal on negatives & account for overhealth
         if (hp - damage.Amount > maxHP)
@@ -63,12 +63,13 @@ public class HealthOwner : Component
             Debug.Log($"[DAMAGE] something on team {team} took {damage.Amount} of {damage.type} damage");
         }
 
-        if (hp > 0) return;
+        if (hp > 0) return false;
 
         hp = 0;
         // healthBar.UpdateHealthBar(hp, maxHP);
         Debug.Log($"[DEATH] something on team {team} died from taking {damage.Amount} pts of {damage.type} damage");
         Destroy(owner);
+        return true;
     }
 
     /// <summary>
