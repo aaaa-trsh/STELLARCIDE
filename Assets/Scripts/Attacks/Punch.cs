@@ -20,29 +20,7 @@ public class Punch : Attack
 
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
-        Collider2D[] entitiesInRange = Physics2D.OverlapAreaAll(
-            Owner.transform.localPosition + (2f * Owner.transform.right) + (0.75f * Owner.transform.up), 
-            Owner.transform.localPosition - (0.75f * Owner.transform.up)
-        );
-
-        for (int i = 0; i < entitiesInRange.Length; i++)
-        {
-            Entity other;
-            try { other = entitiesInRange[i].GetComponent<Entity>(); } catch { other = null; }
-                
-            if (other && other.healthController.team != Owner.GetComponent<Entity>().healthController.team)
-            {
-                other.healthController.TakeDamage(Damage);
-            }
-            
-            // update health bar
-            if (other && other.TryGetComponent(out EnemyHealth enemyHealth))
-            {
-                enemyHealth.healthBar.UpdateHealthBar(other.GetComponent<Entity>().healthController.hp,
-                    other.GetComponent<Entity>().healthController.maxHP);
-            }
-        }
-
+        DamageArea(range: 2, width: 1.5f);
 
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();

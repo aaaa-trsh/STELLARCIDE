@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -56,5 +57,39 @@ public abstract class Attack
         return LastExecute + Cooldown < Time.time;
     }
 
+    /// <summary>
+    /// Damages entities in a rectangular area in front of the owner a.k.a attacker. 
+    /// </summary>
+    /// <param name="range"> Longest distance from origin </param>
+    /// <param name="width"> Complete width of AOE attack </param>
+    /// <returns> A list of entities that recieved damage </returns>
+    public List<Entity> DamageArea(float range, float width)
+    {
+        List<Entity> gameObjectsHit = new List<Entity>();
+        Collider2D[] entitiesInRange = Physics2D.OverlapAreaAll(
+            Owner.transform.localPosition + (range * Owner.transform.right) + (width/2 * Owner.transform.up), 
+            Owner.transform.localPosition - (width/2 * Owner.transform.up)
+        );
 
+        for (int i = 0; i < entitiesInRange.Length; i++)
+        {
+            Entity other;
+            try { other = entitiesInRange[i].GetComponent<Entity>(); } catch { other = null; }
+                
+            if (other && other.healthController.team != Owner.GetComponent<Entity>().healthController.team)
+            {
+                if (!other.healthController.TakeDamage(Damage))
+                    gameObjectsHit.Add(other);
+            }
+            
+            // update health bar
+            if (other && other.TryGetComponent(out EnemyHealth enemyHealth))
+            {
+                enemyHealth.healthBar.UpdateHealthBar(other.GetComponent<Entity>().healthController.hp,
+                    other.GetComponent<Entity>().healthController.maxHP);
+            }
+        }
+
+        return gameObjectsHit;
+    }
 }

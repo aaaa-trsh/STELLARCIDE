@@ -9,29 +9,35 @@ public class Dash : Attack
     /// <param name="owner"></param>
     /// <param name="damage"></param>
     /// <param name="cooldown"></param>
-    /// <param name="travelSpeed"> [0,1] percentage scaling system where at 1, dash is instant</param>
     /// <param name="lifetime"> [0,1] percentage scaling system where at 1, player dashes directly to cursor position </param>
     public Dash(GameObject owner,
                   Damage damage,
                   float cooldown,
-                  float travelSpeed,
                   float lifetime) : base(owner, damage, cooldown)
     {
-        AttackType = Type.MELEE;
-        TravelSpeed = travelSpeed;
+        AttackType = Type.DASH;
         Lifetime = lifetime;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="origin"></param>
+    /// <param name="target"> target has to be the mouse position </param>
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
-        Vector3 aimingAt = (target - origin).normalized;
-        float aimAngle = Mathf.Atan2(aimingAt.y, aimingAt.x) * Mathf.Rad2Deg;
+        Vector3 totalDistance = target - origin;
+        Vector3 targetDistance = totalDistance * Lifetime;
 
-        // draw a rect from origin to target
-        // damage enemies in rect
-        // move toward target based on a percentage value
+        DamageArea(range: targetDistance.magnitude, width: 1.5f);
+        Owner.transform.position += targetDistance;
 
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();
+    }
+
+    void DashAction()
+    {
+        
     }
 }
