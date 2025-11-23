@@ -21,7 +21,7 @@ public class StateController : MonoBehaviour
 
     private void Start()
     {
-        _player = FindFirstObjectByType<PlayerMovement>().transform;
+        _player = FindFirstObjectByType<PlayerController>().transform;
         sprite = GetComponentInChildren<SpriteRenderer>();
         ChangeState(idleState);
     }
