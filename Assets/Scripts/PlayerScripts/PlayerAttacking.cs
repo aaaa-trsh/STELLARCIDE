@@ -46,8 +46,11 @@ public class PlayerAttacking : MonoBehaviour
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPos.z = transform.position.z;
             
+            try
+            {
             if (SecondaryAttack.IsReady())
                 CoroutineManager.Instance.Run(SecondaryAttack.Execute(self.transform.position, mouseWorldPos));
+            } catch{}
         }
     }
 
