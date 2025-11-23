@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 cursorOffset;
 
     void Start() {
+        
+        GameManager.Instance.Player = gameObject;
+        
         camTarget = GetComponentInChildren<ClampedFollower>();
         initialCamTargetDist = camTarget.maxDistance;
         targetCameraDistance = initialCamTargetDist;
