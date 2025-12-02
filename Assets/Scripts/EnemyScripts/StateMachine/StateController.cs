@@ -39,6 +39,8 @@ public class StateController : MonoBehaviour
 
     void Update()
     {
+        if (_player == null)
+            return;
         enemyToPlayerVector = _player.position - transform.position;
         distanceToPlayer = enemyToPlayerVector.magnitude;
         currentState.OnUpdate(this);

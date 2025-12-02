@@ -16,6 +16,11 @@ public class ProjectileController : MonoBehaviour
 
     void Update()
     {
+        if (owner == null)
+        {
+            Destroy(gameObject);
+        }
+        
         transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0), Space.Self);
     }
     
@@ -26,7 +31,7 @@ public class ProjectileController : MonoBehaviour
         if (otherObject.CompareTag("Projectile")) return;
         if (otherObject.CompareTag("Collideable")) Destroy(gameObject);
         // anything that has health is tagged Entity
-        if (otherObject.CompareTag("Entity"))
+        if (otherObject.CompareTag("Entity") || otherObject.CompareTag("Player"))
         {
             // make sure the entity hit isnt on the same team
             if (owner.GetComponent<Entity>().healthController.team == otherObject.GetComponent<Entity>().healthController.team)
