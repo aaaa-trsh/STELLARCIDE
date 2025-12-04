@@ -60,6 +60,7 @@ public class HealthOwner : Component
         else
         {
             hp -= damage.Amount;
+            AudioManager.Instance.PlayPlayerTakeDamageSFX();
             Debug.Log($"[DAMAGE] something on team {team} took {damage.Amount} of {damage.type} damage");
         }
 

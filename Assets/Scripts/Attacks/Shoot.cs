@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using FMODUnity;
 
 public class Shoot : Attack
 {
@@ -14,6 +15,7 @@ public class Shoot : Attack
     /// <param name="cooldown">Time in seconds before another attack</param>
     /// <param name="travelSpeed">Projectile movement speed</param>
     /// <param name="lifetime">Projectile lifetime in seconds</param>
+    /// <param name="sfx">Sound effect for the attack</param>
     /// <param name="piercing">Whether the projectile can pierce Entities</param>
     public Shoot(GameObject owner,
                   Damage damage,
@@ -37,6 +39,7 @@ public class Shoot : Attack
                                                                 Piercing,
                                                                 sizeScalar:2,
                                                                 origin, target);
+        AudioManager.Instance.PlayPlayerShootSFX();
 
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();

@@ -20,6 +20,7 @@ public class Punch : Attack
 
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
+        AudioManager.Instance.PlayPunchingSFX();
         DamageArea(range: 3, width: 3f);
 
         LastExecute = Time.time;
