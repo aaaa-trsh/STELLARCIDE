@@ -18,6 +18,11 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (UITest.gameActive)
+        {
+            return;
+        }
+        
         UpdateTargetDirection();
         RotateTowardsTarget();
         SetVelocity();

@@ -41,6 +41,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
+
+        if (UITest.gameActive)
+        {
+            return;
+        }
+        
         // update cursor
         cursor = CursorUtil.GetCursorPosition();
         cursorOffset = cursor - transform.position;
