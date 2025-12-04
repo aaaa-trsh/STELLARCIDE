@@ -43,6 +43,8 @@ public class AudioManager : MonoBehaviour
 
     #region SFX PATHS
     private string playerShootSFX = "event:/shootingaud";
+    private string playerTakeDamageSFX  = "event:/takedamage3aud";
+    private string punchingSFX = "event:/punchingaud";
     #endregion
 
     void Awake()
@@ -95,6 +97,8 @@ public class AudioManager : MonoBehaviour
 
     #region SFX Functions
        public void PlayPlayerShootSFX() { Play(playerShootSFX); }
+       public void PlayPlayerTakeDamageSFX() { Play(playerTakeDamageSFX); }
+       public void PlayPunchingSFX() { Play(punchingSFX); }
     #endregion
 
 

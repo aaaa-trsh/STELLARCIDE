@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639003860057114427
+  lastModified: 639003904358281599
   FileSizes: []
   Exists: 1
 --- !u!114 &-6358737624054152995
@@ -105,7 +105,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639003850217857514
+  lastModified: 639003904357708150
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -128,16 +128,51 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -3450363912651779677}
   - {fileID: -3215420202877955046}
+  - {fileID: 2136936715182726375}
+  - {fileID: 3391831642638779829}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1628562655183688800}
   StringsBanks:
   - {fileID: 2453479909558567194}
   cacheVersion: 131848
-  cacheTime: 639003900045418659
+  cacheTime: 639003904358281599
   SerializableEventsDict:
   - key: event:/shootingaud
     index: 0
+  - key: event:/BGM
+    index: 1
+  - key: event:/punchingaud
+    index: 2
+  - key: event:/takedamage3aud
+    index: 3
+--- !u!114 &2136936715182726375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/punchingaud
+  m_EditorClassIdentifier: 
+  Path: event:/punchingaud
+  Guid:
+    Data1: 276588371
+    Data2: 1190319154
+    Data3: -242084178
+    Data4: -2129777793
+  Banks:
+  - {fileID: -7252334244280839444}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2453479909558567194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,8 +188,35 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639003850217882658
+  lastModified: 639003904357741856
   FileSizes:
   - Name: 
-    Value: 912
+    Value: 998
   Exists: 1
+--- !u!114 &3391831642638779829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/takedamage3aud
+  m_EditorClassIdentifier: 
+  Path: event:/takedamage3aud
+  Guid:
+    Data1: -1362258256
+    Data2: 1197830768
+    Data3: -423196010
+    Data4: -776170325
+  Banks:
+  - {fileID: -7252334244280839444}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
