@@ -35,13 +35,13 @@ public class PlayerAttacking : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             // this is how you actually attack
             if (BaseAttack.IsReady()) // check if in cooldown
                 CoroutineManager.Instance.Run(BaseAttack.Execute(self.transform.position, self.transform.right));
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPos.z = transform.position.z;
@@ -62,10 +62,10 @@ public class PlayerAttacking : MonoBehaviour
         Gizmos.color = Color.red;
         Vector3[] points = new Vector3[4]
         {
-          transform.localPosition + (2 * transform.right) + (0.75f * transform.up), // top right
-          transform.localPosition + (2 * transform.right) - (0.75f * transform.up), // top left
-          transform.localPosition - (0.75f * transform.up), // bot left
-          transform.localPosition + (0.75f * transform.up), // bot right
+          transform.localPosition + (3 * transform.right) + (1.5f * transform.up), // top right
+          transform.localPosition + (3 * transform.right) - (1.5f * transform.up), // top left
+          transform.localPosition - (1.5f * transform.up), // bot left
+          transform.localPosition + (1.5f * transform.up), // bot right
         };
         Vector3[] faces = new Vector3[8]
         {
@@ -95,7 +95,7 @@ public class PlayerAttacking : MonoBehaviour
         {
             BaseAttack = new Punch(self,
                 damage: new Damage(10, Damage.Type.PHYSICAL),
-                cooldown: 1f
+                cooldown: 0.5f
             );
             SecondaryAttack = new Dash(self, 
                 damage: new Damage(10, Damage.Type.PHYSICAL),

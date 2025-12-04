@@ -68,6 +68,12 @@ public class HealthOwner : Component
         hp = 0;
         // healthBar.UpdateHealthBar(hp, maxHP);
         Debug.Log($"[DEATH] something on team {team} died from taking {damage.Amount} pts of {damage.type} damage");
+
+        if (team == Team.PLAYER)
+        {
+            return true;
+        }
+        
         Destroy(owner);
         return true;
     }
