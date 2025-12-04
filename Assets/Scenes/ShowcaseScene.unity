@@ -792,6 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc1ff2e4c3504b4898dbf96085b6dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScene: 1
 --- !u!4 &549631977
 Transform:
   m_ObjectHideFlags: 0
@@ -2148,6 +2149,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2036261219229730888, guid: f8daf7b5bee17df40a8cdb515017a90c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2405355010778710432, guid: f8daf7b5bee17df40a8cdb515017a90c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.10000001
@@ -2445,11 +2450,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 227749166290261818, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 227749166290261818, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 227749166290261818, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: m_LocalScale.z
@@ -2519,6 +2524,10 @@ PrefabInstance:
       propertyPath: acceleration
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4183817709701007563, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4609194696940913261, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: mechSprite
       value: 
@@ -2527,10 +2536,22 @@ PrefabInstance:
       propertyPath: shipSprite
       value: 
       objectReference: {fileID: 1540852798}
+    - target: {fileID: 7684684304895595447, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7996320319197501839, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1280812358}
+    - target: {fileID: 8797113400631551818, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
+      propertyPath: mechTurnSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797113400631551818, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
+      propertyPath: shipTurnSpeed
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9201615540580823951, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
@@ -2977,7 +2998,7 @@ GameObject:
   - component: {fileID: 1747396099}
   - component: {fileID: 1747396098}
   - component: {fileID: 1747396097}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: asteroid_3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3209,7 +3230,7 @@ GameObject:
   - component: {fileID: 1954246598}
   - component: {fileID: 1954246597}
   - component: {fileID: 1954246596}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: asteroid_4_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3643,7 +3664,7 @@ GameObject:
   - component: {fileID: 2122194922}
   - component: {fileID: 2122194921}
   - component: {fileID: 2122194920}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: asteroid_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3907,12 +3928,10 @@ SceneRoots:
   - {fileID: 551508687}
   - {fileID: 1603050418}
   - {fileID: 1721357828}
-  - {fileID: 1280812357}
-  - {fileID: 1540852795}
   - {fileID: 1655863299}
   - {fileID: 2122194922}
   - {fileID: 1747396099}
   - {fileID: 1954246598}
   - {fileID: 1078034800}
-  - {fileID: 363321786}
-  - {fileID: 1246028281}
+  - {fileID: 1540852795}
+  - {fileID: 1280812357}

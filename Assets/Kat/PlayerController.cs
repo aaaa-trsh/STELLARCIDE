@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float thrustCamSpeed;
     [SerializeField] private float shipMinCameraDist = 1;
     [SerializeField] private float shipMaxCameraDist = 4;
+    [SerializeField] private float shipTurnSpeed = 30f;
     
     [Header("Mech Settings")]
     [SerializeField] private float mechCameraDist = 2;
     [SerializeField] private LayerMask mechTransitionLayer;
-
+    [SerializeField] private float mechTurnSpeed = 100f;
+    
     private PlayerMode currentMode = PlayerMode.SHIP;
     
     private float targetCameraDistance;
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     void HandleShipControls() {
         if (cursorOffset.magnitude > shipMinCameraDist) {
-            TurnToCursor();
+            TurnToCursor(shipTurnSpeed);
         }
 
         // input based off thrust
@@ -92,7 +94,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void HandleMechControls() {
-        TurnToCursor();
+        TurnToCursor(mechTurnSpeed);
 
         // directional input
         Vector2 wishDir = new Vector2(
@@ -104,9 +106,14 @@ public class PlayerController : MonoBehaviour
         targetCameraDistance = mechCameraDist;
     }
 
-    void TurnToCursor() {
+    void TurnToCursor(float turnSpeed) {
         float angle = Mathf.Atan2(cursorOffset.y, cursorOffset.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        // Create target rotation
+        Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        // Constant Turn Rate
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     // very simple state transitions

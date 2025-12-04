@@ -18,6 +18,8 @@ public class StateController : MonoBehaviour
     public Vector2 enemyToPlayerVector { get; private set; }
     public float distanceToPlayer { get; private set; }
 
+    private float timeElapsed = 0.0f;
+
 
     private void Start()
     {
@@ -44,6 +46,18 @@ public class StateController : MonoBehaviour
         enemyToPlayerVector = _player.position - transform.position;
         distanceToPlayer = enemyToPlayerVector.magnitude;
         currentState.OnUpdate(this);
+        rotateToPlayer();
+    }
+
+    public void rotateToPlayer()
+    {
+        Vector2 direction = _player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90f;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        timeElapsed += Time.deltaTime;
+        float t = timeElapsed / 2;
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, t);
     }
 
     public void attackPlayer(Attack attack)

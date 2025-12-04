@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Attach this to every player. This class derives from Entity but has little abstraction.
@@ -10,5 +12,13 @@ public class PlayerHealth : Entity
     void Start()
     {
         healthController = new HealthOwner(health, HealthOwner.Team.PLAYER, gameObject);
+    }
+
+    private void Update()
+    {
+        if (healthController.hp <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        } 
     }
 }
