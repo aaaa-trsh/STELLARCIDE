@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639003843378598352
+  lastModified: 639003900045418659
   FileSizes: []
   Exists: 1
 --- !u!114 &-3450363912651779677
@@ -63,6 +63,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3215420202877955046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  Guid:
+    Data1: -605458023
+    Data2: 1114564915
+    Data3: -1789381728
+    Data4: -1985101211
+  Banks:
+  - {fileID: -6358737624054152995}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 188466
 --- !u!114 &-1628562655183688800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,20 +126,18 @@ MonoBehaviour:
   - {fileID: -6358737624054152995}
   - {fileID: -7252334244280839444}
   EditorEvents:
-  - {fileID: 6851952081446268463}
   - {fileID: -3450363912651779677}
+  - {fileID: -3215420202877955046}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1628562655183688800}
   StringsBanks:
   - {fileID: 2453479909558567194}
   cacheVersion: 131848
-  cacheTime: 639003860057114427
+  cacheTime: 639003900045418659
   SerializableEventsDict:
-  - key: event:/BGM
-    index: 0
   - key: event:/shootingaud
-    index: 1
+    index: 0
 --- !u!114 &2453479909558567194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,30 +158,3 @@ MonoBehaviour:
   - Name: 
     Value: 912
   Exists: 1
---- !u!114 &6851952081446268463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BGM
-  m_EditorClassIdentifier: 
-  Path: event:/BGM
-  Guid:
-    Data1: -605458023
-    Data2: 1114564915
-    Data3: -1789381728
-    Data4: -1985101211
-  Banks:
-  - {fileID: -6358737624054152995}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 188466

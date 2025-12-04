@@ -1,6 +1,7 @@
 using System;
 using Unity.Cinemachine;
 using UnityEngine;
+using FMODUnity;
 /// <summary>
 /// Controller script for player attacks 
 /// </summary>

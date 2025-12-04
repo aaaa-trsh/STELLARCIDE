@@ -49,6 +49,7 @@ public abstract class Attack
     {
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();
+        // AudioManager.Instance.PlayPlayerShootSFX();
     }
 
     /// <returns>True if cooldown is down. False if cooldown is still counting</returns>
