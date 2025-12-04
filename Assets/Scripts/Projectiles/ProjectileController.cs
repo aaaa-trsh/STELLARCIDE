@@ -28,7 +28,7 @@ public class ProjectileController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject otherObject = other.gameObject;
-        if (otherObject.CompareTag("Projectile")) return;
+        if (otherObject.CompareTag("Projectile") || otherObject.layer == 3) return;
         if (otherObject.CompareTag("Collideable")) Destroy(gameObject);
         // anything that has health is tagged Entity
         if (otherObject.CompareTag("Entity") || otherObject.CompareTag("Player"))

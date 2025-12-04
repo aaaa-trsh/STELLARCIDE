@@ -12,6 +12,9 @@ public class ShootState : IState
         UnityEngine.Debug.Log("entering shooting state");
 
         self = controller.gameObject;
+        if (shoot != null)
+            return;
+        
         shoot = new Shoot(self,
             damage: new Damage(10, Damage.Type.PHYSICAL),
             cooldown: 1f,

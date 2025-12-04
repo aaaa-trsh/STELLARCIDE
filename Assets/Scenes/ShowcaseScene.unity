@@ -2408,6 +2408,10 @@ PrefabInstance:
       propertyPath: acceleration
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4183817709701007563, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4609194696940913261, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: mechSprite
       value: 
@@ -2416,6 +2420,10 @@ PrefabInstance:
       propertyPath: shipSprite
       value: 
       objectReference: {fileID: 1540852798}
+    - target: {fileID: 7684684304895595447, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7996320319197501839, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: target
       value: 
