@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class ProjectileManager : MonoBehaviour
 {
-    GameObject projectile;
-
+    GameObject playerProjectile;
+    GameObject enemyProjectile;
+    
     void Start()
     {
         GameManager.Instance.ProjectileManager = this;
-        projectile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/Projectile", typeof(GameObject));
+        playerProjectile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/PlayerProjectile", typeof(GameObject));
+        enemyProjectile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/RedDwarfProjectile", typeof(GameObject));
+
     }
 
     public void CreateProjectile(GameObject owner,
@@ -20,7 +23,7 @@ public class ProjectileManager : MonoBehaviour
                           Vector3 target)
     {
         GameObject newProjectile = Instantiate(
-            projectile,
+            owner.CompareTag("Player") ? playerProjectile : enemyProjectile,
             origin,
             Quaternion.Euler(0, 0, Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg)
         );

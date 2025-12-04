@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2384599919160288854}
   - component: {fileID: -3228429747860222878}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: RedDwarfProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.89293134, b: 0, a: 1}
+  m_Sprite: {fileID: -6554065409591530432, guid: 613711de79616b74c91a40bcfe91199c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
