@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 324b13e31a805d14fb67addebdc02c57
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5877529206029778464
+    second: asteroids_belt_bg_0
+  - first:
+      213: -7278446602358147425
+    second: asteroids_belt_bg_1
+  - first:
+      213: -8824555937008001485
+    second: asteroids_belt_bg_2
+  - first:
+      213: -888646900737607439
+    second: asteroids_belt_bg_3
+  - first:
+      213: 5791494132350027014
+    second: asteroids_belt_bg_4
+  - first:
+      213: -6832977620449133644
+    second: asteroids_belt_bg_5
+  - first:
+      213: -6128594490032729558
+    second: asteroids_belt_bg_6
+  - first:
+      213: 1174091511524045000
+    second: asteroids_belt_bg_7
+  - first:
+      213: 668682168284888034
+    second: asteroids_belt_bg_8
+  - first:
+      213: -3001349549873292873
+    second: asteroids_belt_bg_9
+  - first:
+      213: 7631857106787702940
+    second: asteroids_belt_bg_10
+  - first:
+      213: 4215981849993020475
+    second: asteroids_belt_bg_11
+  - first:
+      213: 9036854647136581519
+    second: asteroids_belt_bg_12
+  - first:
+      213: -5528604036996476995
+    second: asteroids_belt_bg_13
+  - first:
+      213: 7311110545165528731
+    second: asteroids_belt_bg_14
+  - first:
+      213: 6389086768047720418
+    second: asteroids_belt_bg_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: asteroids_belt_bg_0
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 868
+        width: 350
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e73622cad219150800000000000000
+      internalID: 5877529206029778464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_1
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1034
+        width: 63
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f963bc5c063cdfa90800000000000000
+      internalID: -7278446602358147425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 953
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33ed21a3121e88580800000000000000
+      internalID: -8824555937008001485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_3
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 914
+        width: 55
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f878ce1a54eaa3f0800000000000000
+      internalID: -888646900737607439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_4
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 913
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6058b7d8a358f5050800000000000000
+      internalID: 5791494132350027014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_5
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 741
+        width: 119
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb7fee8e036c21a0800000000000000
+      internalID: -6832977620449133644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_6
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 791
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22de2138cbd2faa0800000000000000
+      internalID: -6128594490032729558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_7
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 716
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0313652063b4010800000000000000
+      internalID: 1174091511524045000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_8
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 647
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb3244a3e2a74900800000000000000
+      internalID: 668682168284888034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 525
+        width: 86
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b916097c701956d0800000000000000
+      internalID: -3001349549873292873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_10
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 63
+        width: 120
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c981f927a9dc9e960800000000000000
+      internalID: 7631857106787702940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_11
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 95
+        width: 141
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b340454c72d228a30800000000000000
+      internalID: 4215981849993020475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_12
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 48
+        width: 167
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87f9691c6b596d70800000000000000
+      internalID: 9036854647136581519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_13
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 147
+        width: 290
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbfc80f8be37643b0800000000000000
+      internalID: -5528604036996476995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_14
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 80
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e243e0e48467560800000000000000
+      internalID: 7311110545165528731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroids_belt_bg_15
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 44
+        width: 40
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e702a090989aa850800000000000000
+      internalID: 6389086768047720418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      asteroids_belt_bg_0: 5877529206029778464
+      asteroids_belt_bg_1: -7278446602358147425
+      asteroids_belt_bg_10: 7631857106787702940
+      asteroids_belt_bg_11: 4215981849993020475
+      asteroids_belt_bg_12: 9036854647136581519
+      asteroids_belt_bg_13: -5528604036996476995
+      asteroids_belt_bg_14: 7311110545165528731
+      asteroids_belt_bg_15: 6389086768047720418
+      asteroids_belt_bg_2: -8824555937008001485
+      asteroids_belt_bg_3: -888646900737607439
+      asteroids_belt_bg_4: 5791494132350027014
+      asteroids_belt_bg_5: -6832977620449133644
+      asteroids_belt_bg_6: -6128594490032729558
+      asteroids_belt_bg_7: 1174091511524045000
+      asteroids_belt_bg_8: 668682168284888034
+      asteroids_belt_bg_9: -3001349549873292873
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

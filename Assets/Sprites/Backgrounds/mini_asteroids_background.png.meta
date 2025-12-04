@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: e026bca6f3922ff4e8cc1d67cf895999
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7649807216182027164
+    second: mini_asteroids_background_0
+  - first:
+      213: -8136128937314715682
+    second: mini_asteroids_background_1
+  - first:
+      213: -8059229833318948195
+    second: mini_asteroids_background_2
+  - first:
+      213: 8649502090097551871
+    second: mini_asteroids_background_3
+  - first:
+      213: -8477072095115622703
+    second: mini_asteroids_background_4
+  - first:
+      213: -994816351494126357
+    second: mini_asteroids_background_5
+  - first:
+      213: 3081219493576944331
+    second: mini_asteroids_background_6
+  - first:
+      213: 4812971450307552349
+    second: mini_asteroids_background_7
+  - first:
+      213: -4243879148244114494
+    second: mini_asteroids_background_8
+  - first:
+      213: 6175714881062872270
+    second: mini_asteroids_background_9
+  - first:
+      213: 1963392810252782879
+    second: mini_asteroids_background_10
+  - first:
+      213: -1323867701725992596
+    second: mini_asteroids_background_11
+  - first:
+      213: -8392122448804391688
+    second: mini_asteroids_background_12
+  - first:
+      213: -2465117229237022061
+    second: mini_asteroids_background_13
+  - first:
+      213: -6344580761374234645
+    second: mini_asteroids_background_14
+  - first:
+      213: -5965093428108954132
+    second: mini_asteroids_background_15
+  - first:
+      213: -7339520829119067646
+    second: mini_asteroids_background_16
+  - first:
+      213: 6946622867240689934
+    second: mini_asteroids_background_17
+  - first:
+      213: 161319290903965425
+    second: mini_asteroids_background_18
+  - first:
+      213: -3325601527125666356
+    second: mini_asteroids_background_19
+  - first:
+      213: 7104230154916021373
+    second: mini_asteroids_background_20
+  - first:
+      213: -1244422574887016705
+    second: mini_asteroids_background_21
+  - first:
+      213: -2085285535056805528
+    second: mini_asteroids_background_22
+  - first:
+      213: 1387187544151603563
+    second: mini_asteroids_background_23
+  - first:
+      213: -5408334777125730056
+    second: mini_asteroids_background_24
+  - first:
+      213: -7738600561395350549
+    second: mini_asteroids_background_25
+  - first:
+      213: -8000386028971347414
+    second: mini_asteroids_background_26
+  - first:
+      213: -479290837858387255
+    second: mini_asteroids_background_27
+  - first:
+      213: 4579210244115312893
+    second: mini_asteroids_background_28
+  - first:
+      213: -1941848730283035052
+    second: mini_asteroids_background_29
+  - first:
+      213: 6855817744183533417
+    second: mini_asteroids_background_30
+  - first:
+      213: 7814136998081211335
+    second: mini_asteroids_background_31
+  - first:
+      213: -5483436114307838902
+    second: mini_asteroids_background_32
+  - first:
+      213: -6830096694186453564
+    second: mini_asteroids_background_33
+  - first:
+      213: 7517999728656537762
+    second: mini_asteroids_background_34
+  - first:
+      213: 6486014795068999649
+    second: mini_asteroids_background_35
+  - first:
+      213: 1455756778952571574
+    second: mini_asteroids_background_36
+  - first:
+      213: 8060660574151938365
+    second: mini_asteroids_background_37
+  - first:
+      213: 6016518624166159027
+    second: mini_asteroids_background_38
+  - first:
+      213: 949990631974737869
+    second: mini_asteroids_background_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mini_asteroids_background_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 3306
+        width: 71
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c10470edc66d590800000000000000
+      internalID: -7649807216182027164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2985
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7749ca6d9a61f80800000000000000
+      internalID: -8136128937314715682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2989
+        width: 110
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d922bcd8a2dd72090800000000000000
+      internalID: -8059229833318948195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 2798
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9634ce254390870800000000000000
+      internalID: 8649502090097551871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2615
+        width: 105
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6c14bc7d36b5a80800000000000000
+      internalID: -8477072095115622703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_5
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2666
+        width: 65
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be441709cc3b132f0800000000000000
+      internalID: -994816351494126357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_6
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 2454
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcaa9adedc0b2ca20800000000000000
+      internalID: 3081219493576944331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_7
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 2370
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54ada9a80c1bc240800000000000000
+      internalID: 4812971450307552349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_8
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2257
+        width: 66
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3e8335666ba15c0800000000000000
+      internalID: -4243879148244114494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_9
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1942
+        width: 109
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec4a8d7c6fb84b550800000000000000
+      internalID: 6175714881062872270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_10
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2087
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d4ca1cb5f5f3b10800000000000000
+      internalID: 1963392810252782879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_11
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1971
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c696205e65da0ade0800000000000000
+      internalID: -1323867701725992596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_12
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 2015
+        width: 91
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4de6f9811398b80800000000000000
+      internalID: -8392122448804391688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_13
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1892
+        width: 106
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392d1a5d0f42acdd0800000000000000
+      internalID: -2465117229237022061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_14
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1810
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7e28d996583f7a0800000000000000
+      internalID: -6344580761374234645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_15
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1712
+        width: 116
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce57c8da12bb73da0800000000000000
+      internalID: -5965093428108954132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_16
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1719
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a07ce31b8c42a90800000000000000
+      internalID: -7339520829119067646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_17
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 1608
+        width: 86
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e01ac7661bc576060800000000000000
+      internalID: 6946622867240689934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_18
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1613
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1feafb55a0f1d3200800000000000000
+      internalID: 161319290903965425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_19
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1494
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc59d27e70719d1d0800000000000000
+      internalID: -3325601527125666356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_20
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1485
+        width: 95
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d744362afab479260800000000000000
+      internalID: 7104230154916021373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_21
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1283
+        width: 87
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6e169e24ceabee0800000000000000
+      internalID: -1244422574887016705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_22
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1349
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861cdabaad39f03e0800000000000000
+      internalID: -2085285535056805528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_23
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1329
+        width: 98
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69b006c8b7404310800000000000000
+      internalID: 1387187544151603563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_24
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 1194
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8870fbc2cb1f4b0800000000000000
+      internalID: -5408334777125730056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_25
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1063
+        width: 77
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3446f4ac7fa9490800000000000000
+      internalID: -7738600561395350549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_26
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 898
+        width: 122
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a223a256b4be8f090800000000000000
+      internalID: -8000386028971347414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_27
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 967
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9caf959b5873959f0800000000000000
+      internalID: -479290837858387255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_28
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 914
+        width: 132
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0b250947f9c8f30800000000000000
+      internalID: 4579210244115312893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_29
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 876
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456bfef3eda2d05e0800000000000000
+      internalID: -1941848730283035052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_30
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 844
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f11e62ae1c42f50800000000000000
+      internalID: 6855817744183533417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_31
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 872
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb2edcd234617c60800000000000000
+      internalID: 7814136998081211335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_32
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 661
+        width: 104
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c022218ebe6e3b0800000000000000
+      internalID: -5483436114307838902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_33
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 782
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c552797e3f9631a0800000000000000
+      internalID: -6830096694186453564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_34
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 709
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a85e00dbec455860800000000000000
+      internalID: 7517999728656537762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_35
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 684
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7040c7714f20a50800000000000000
+      internalID: 6486014795068999649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_36
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 470
+        width: 82
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bab5d8d313e33410800000000000000
+      internalID: 1455756778952571574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_37
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 571
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d319251c5183ddf60800000000000000
+      internalID: 8060660574151938365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_38
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 459
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b222f1dfc7fe7350800000000000000
+      internalID: 6016518624166159027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mini_asteroids_background_39
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 207
+        width: 49
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc79dce427b0f2d00800000000000000
+      internalID: 949990631974737869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mini_asteroids_background_0: -7649807216182027164
+      mini_asteroids_background_1: -8136128937314715682
+      mini_asteroids_background_10: 1963392810252782879
+      mini_asteroids_background_11: -1323867701725992596
+      mini_asteroids_background_12: -8392122448804391688
+      mini_asteroids_background_13: -2465117229237022061
+      mini_asteroids_background_14: -6344580761374234645
+      mini_asteroids_background_15: -5965093428108954132
+      mini_asteroids_background_16: -7339520829119067646
+      mini_asteroids_background_17: 6946622867240689934
+      mini_asteroids_background_18: 161319290903965425
+      mini_asteroids_background_19: -3325601527125666356
+      mini_asteroids_background_2: -8059229833318948195
+      mini_asteroids_background_20: 7104230154916021373
+      mini_asteroids_background_21: -1244422574887016705
+      mini_asteroids_background_22: -2085285535056805528
+      mini_asteroids_background_23: 1387187544151603563
+      mini_asteroids_background_24: -5408334777125730056
+      mini_asteroids_background_25: -7738600561395350549
+      mini_asteroids_background_26: -8000386028971347414
+      mini_asteroids_background_27: -479290837858387255
+      mini_asteroids_background_28: 4579210244115312893
+      mini_asteroids_background_29: -1941848730283035052
+      mini_asteroids_background_3: 8649502090097551871
+      mini_asteroids_background_30: 6855817744183533417
+      mini_asteroids_background_31: 7814136998081211335
+      mini_asteroids_background_32: -5483436114307838902
+      mini_asteroids_background_33: -6830096694186453564
+      mini_asteroids_background_34: 7517999728656537762
+      mini_asteroids_background_35: 6486014795068999649
+      mini_asteroids_background_36: 1455756778952571574
+      mini_asteroids_background_37: 8060660574151938365
+      mini_asteroids_background_38: 6016518624166159027
+      mini_asteroids_background_39: 949990631974737869
+      mini_asteroids_background_4: -8477072095115622703
+      mini_asteroids_background_5: -994816351494126357
+      mini_asteroids_background_6: 3081219493576944331
+      mini_asteroids_background_7: 4812971450307552349
+      mini_asteroids_background_8: -4243879148244114494
+      mini_asteroids_background_9: 6175714881062872270
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
