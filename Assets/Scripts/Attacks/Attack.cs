@@ -22,7 +22,7 @@ public abstract class Attack
         RANGED,
         DASH
     }
-    protected Type AttackType;
+    public Type AttackType;
     public float LastExecute;
 
     /// <summary>
