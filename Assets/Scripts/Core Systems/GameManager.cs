@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static readonly GameManager Instance = new();
+    public static GameManager Instance;
+
+    void Start()
+    {
+        Instance = this;
+    }
 
     public GameObject Player;
     public ProjectileManager ProjectileManager;
