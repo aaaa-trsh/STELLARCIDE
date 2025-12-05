@@ -1,7 +1,7 @@
 using System;
-using Unity.Cinemachine;
 using UnityEngine;
-using FMODUnity;
+using System.Collections;
+
 /// <summary>
 /// Controller script for player attacks 
 /// </summary>
@@ -10,7 +10,8 @@ public class PlayerAttacking : MonoBehaviour
     [NonSerialized] public Attack BaseAttack;
     [NonSerialized] public Attack SecondaryAttack;
     private GameObject self;
-
+    [Header("DEBUG REMOVE THIS AFTER SHOWCASE")]
+    public GameObject punchViz;
 
     void Start()
     {
@@ -41,6 +42,15 @@ public class PlayerAttacking : MonoBehaviour
             // this is how you actually attack
             if (BaseAttack.IsReady()) // check if in cooldown
                 CoroutineManager.Instance.Run(BaseAttack.Execute(self.transform.position, self.transform.right));
+
+            // asdfioawrfnlvfdhuiaernjkfdojianwrle DEBUG GET RID OF THIS AFTER SHOWCASE asdfioawrfnlvfdhuiaernjkfdojianwrle
+            Debug.Log(BaseAttack.AttackType);
+            if (BaseAttack.AttackType == Attack.Type.MELEE)
+            {
+                StartCoroutine(ShowPunch());
+            }
+            // asdfioawrfnlvfdhuiaernjkfdojianwrle DEBUG GET RID OF THIS AFTER SHOWCASE asdfioawrfnlvfdhuiaernjkfdojianwrle
+
         }
         if (Input.GetMouseButton(1))
         {
@@ -77,7 +87,6 @@ public class PlayerAttacking : MonoBehaviour
         };
         Gizmos.DrawLineList(faces);
     }
-    
 
     void SwapAttacks(bool isShip)
     {
@@ -104,5 +113,13 @@ public class PlayerAttacking : MonoBehaviour
                 lifetime: 1f
             );
         }  
+    }
+
+    // asdfioawrfnlvfdhuiaernjkfdojianwrle DEBUG GET RID OF THIS AFTER SHOWCASE asdfioawrfnlvfdhuiaernjkfdojianwrle
+    IEnumerator ShowPunch()
+    {
+        punchViz.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        punchViz.SetActive(false);
     }
 }
