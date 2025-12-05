@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum PlayerMode {
@@ -30,9 +31,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 cursor;
     private Vector3 cursorOffset;
 
-    void Start() {
-        
+    private void Awake()
+    {
         GameManager.Instance.Player = gameObject;
+    }
+
+    void Start() {
         
         camTarget = GetComponentInChildren<ClampedFollower>();
         initialCamTargetDist = camTarget.maxDistance;
