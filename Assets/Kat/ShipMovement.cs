@@ -5,7 +5,7 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float speed, acceleration;
     [SerializeField] private float swingReduceFactor;
     [SerializeField] private float driftReduceFactor;
-    [SerializeField] private float boost = 5;
+    // [SerializeField] private float boost = 5;
 
     private Rigidbody2D rb;
     private Vector2 wish;

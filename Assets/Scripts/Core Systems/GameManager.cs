@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager
 {
-    public static GameManager Instance;
+    static GameManager thisInstance;
 
-    void Start()
+    public static GameManager Instance
     {
-        Instance = this;
+        get { return thisInstance ??= new GameManager(); }
     }
 
     public GameObject Player;

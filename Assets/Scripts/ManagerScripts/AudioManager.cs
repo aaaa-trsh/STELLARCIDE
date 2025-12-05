@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
     #endregion
 
     #region OST PATHS
-    private string masterOST = "event:/BGM";
+    // private string masterOST = "event:/BGM";
     #endregion
 
     #region SFX PATHS
