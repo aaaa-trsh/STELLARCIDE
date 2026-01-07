@@ -1,6 +1,12 @@
 using System;
 using UnityEngine;
-using System.Collections;
+using Unity.VisualScripting;
+
+/* TODO:
+++ store attack collections in a struct
+-- i.e. PlayerAttacks[] & AttacksList[]
+++ sync punch animation w/ damage
+*/
 
 /// <summary>
 /// Controller script for player attacks 
@@ -10,8 +16,6 @@ public class PlayerAttacking : MonoBehaviour
     [NonSerialized] public Attack BaseAttack;
     [NonSerialized] public Attack SecondaryAttack;
     private GameObject self;
-    [Header("DEBUG REMOVE THIS AFTER SHOWCASE")]
-    public GameObject punchViz;
 
     void Start()
     {
@@ -36,52 +40,24 @@ public class PlayerAttacking : MonoBehaviour
         {
             // this is how you actually attack
             if (BaseAttack.IsReady()) // check if in cooldown
-                CoroutineManager.Instance.Run(BaseAttack.Execute(self.transform.position, self.transform.right));
-
-            // asdfioawrfnlvfdhuiaernjkfdojianwrle DEBUG GET RID OF THIS AFTER SHOWCASE asdfioawrfnlvfdhuiaernjkfdojianwrle
-            Debug.Log(BaseAttack.AttackType);
-            if (BaseAttack.AttackType == Attack.Type.MELEE)
             {
-                StartCoroutine(ShowPunch());
+                CoroutineManager.Instance.Run(BaseAttack.Execute(self.transform.position, self.transform.right));
             }
-            // asdfioawrfnlvfdhuiaernjkfdojianwrle DEBUG GET RID OF THIS AFTER SHOWCASE asdfioawrfnlvfdhuiaernjkfdojianwrle
-
         }
+
         if (Input.GetMouseButton(1))
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPos.z = transform.position.z;
-            
-            try
+            if (!SecondaryAttack.IsUnityNull())
             {
-            if (SecondaryAttack.IsReady())
-                CoroutineManager.Instance.Run(SecondaryAttack.Execute(self.transform.position, mouseWorldPos));
-            } catch{}
+                if (SecondaryAttack.IsReady())
+                {
+                    Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    mouseWorldPos.z = transform.position.z;
+                    CoroutineManager.Instance.Run(SecondaryAttack.Execute(self.transform.position, mouseWorldPos));
+                }
+            }
         }
     }
-
-
-    // punch hitbox vizualizer 
-    // void OnDrawGizmos()
-    // {
-    //     // punch hitbox holy shit
-    //     Gizmos.color = Color.red;
-    //     Vector3[] points = new Vector3[4]
-    //     {
-    //       transform.localPosition + (3 * transform.right) + (1.5f * transform.up), // top right
-    //       transform.localPosition + (3 * transform.right) - (1.5f * transform.up), // top left
-    //       transform.localPosition - (1.5f * transform.up), // bot left
-    //       transform.localPosition + (1.5f * transform.up), // bot right
-    //     };
-    //     Vector3[] faces = new Vector3[8]
-    //     {
-    //         points[0], points[1],
-    //         points[1], points[2],
-    //         points[2], points[3],
-    //         points[3], points[0],
-    //     };
-    //     Gizmos.DrawLineList(faces);
-    // }
 
     void SwapAttacks(bool isShip)
     {
@@ -102,6 +78,7 @@ public class PlayerAttacking : MonoBehaviour
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 0.5f
             );
+
             SecondaryAttack = new Dash(self, 
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 1f,
@@ -110,11 +87,4 @@ public class PlayerAttacking : MonoBehaviour
         }  
     }
 
-    // asdfioawrfnlvfdhuiaernjkfdojianwrle DEBUG GET RID OF THIS AFTER SHOWCASE asdfioawrfnlvfdhuiaernjkfdojianwrle
-    IEnumerator ShowPunch()
-    {
-        punchViz.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
-        punchViz.SetActive(false);
-    }
 }
