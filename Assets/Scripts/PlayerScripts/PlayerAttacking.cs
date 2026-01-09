@@ -5,7 +5,6 @@ using Unity.VisualScripting;
 /* TODO:
 ++ store attack collections in a struct
 -- i.e. PlayerAttacks[] & AttacksList[]
-++ sync punch animation w/ damage
 */
 
 /// <summary>
@@ -86,5 +85,4 @@ public class PlayerAttacking : MonoBehaviour
             );
         }  
     }
-
 }

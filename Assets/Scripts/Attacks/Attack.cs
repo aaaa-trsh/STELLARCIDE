@@ -68,11 +68,22 @@ public abstract class Attack
     /// <returns> A list of entities that recieved damage </returns>
     public List<Entity> DamageArea(float range, float width)
     {
-        List<Entity> gameObjectsHit = new List<Entity>();
-        Collider2D[] entitiesInRange = Physics2D.OverlapAreaAll(
+        return DamageArea(
             Owner.transform.localPosition + (range * Owner.transform.right) + (width/2 * Owner.transform.up), 
             Owner.transform.localPosition - (width/2 * Owner.transform.up)
         );
+    }
+
+    /// <summary>
+    /// Damage entities in a rectangular area anywhere in the world
+    /// </summary>
+    /// <param name="start"></param>
+    /// <param name="end"></param>
+    /// <returns></returns>
+    public List<Entity> DamageArea(Vector3 start, Vector3 end)
+    {
+        List<Entity> gameObjectsHit = new List<Entity>();
+        Collider2D[] entitiesInRange = Physics2D.OverlapAreaAll(start,end);
 
         for (int i = 0; i < entitiesInRange.Length; i++)
         {
@@ -102,10 +113,6 @@ public abstract class Attack
     /// <returns>True when Attack.Animator still playing a specific animation</returns>
     public virtual bool AnimatorIsPlaying()
     {
-        // return Animator.GetCurrentAnimatorStateInfo(0).length > 
-        //     Animator.GetCurrentAnimatorStateInfo(0).normalizedTime &&
-        //     Animator.GetCurrentAnimatorStateInfo(0).IsName(AnimationName);
-
         return Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && 
             Animator.GetCurrentAnimatorStateInfo(0).IsName(AnimationName);
     }

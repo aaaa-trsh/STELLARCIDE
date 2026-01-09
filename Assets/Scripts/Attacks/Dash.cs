@@ -26,18 +26,13 @@ public class Dash : Attack
     /// <param name="target"> target has to be the mouse position </param>
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
-        Vector3 totalDistance = target - origin;
-        Vector3 targetDistance = totalDistance * Lifetime;
+        Vector3 targetDistance = (target - origin) * Lifetime;
 
-        DamageArea(range: targetDistance.magnitude, width: 1.5f);
         Owner.transform.position += targetDistance;
+        DamageArea(range: -targetDistance.magnitude, width: 1.5f);
 
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();
     }
 
-    void DashAction()
-    {
-        
-    }
 }
