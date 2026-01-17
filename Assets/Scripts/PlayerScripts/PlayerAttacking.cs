@@ -81,6 +81,7 @@ public class PlayerAttacking : MonoBehaviour
             SecondaryAttack = new Dash(self, 
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 1f,
+                travelSpeed:0.25f, // looks like the max value before there is a pause after a dash
                 lifetime: 1f
             );
         }  
