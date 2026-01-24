@@ -28,11 +28,8 @@ public class Punch : Attack
         if (Animator) Animator.SetTrigger("executePunch");
 
         LastExecute = Time.time;
-        // these both should play the animation but get cut off around the middle
         yield return new WaitWhile(AnimatorIsPlaying);
-        // yield return new WaitUntil(AnimatorIsPlaying);
 
-        
         AudioManager.Instance.PlayPunchingSFX();
         DamageArea(range: 3, width: 3f);
 

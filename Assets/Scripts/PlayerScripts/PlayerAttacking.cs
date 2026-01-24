@@ -3,8 +3,10 @@ using UnityEngine;
 using Unity.VisualScripting;
 
 /* TODO:
-++ store attack collections in a struct
--- i.e. PlayerAttacks[] & AttacksList[]
+++ store inventory of attacks
+-- i.e. AttackInventory[] & AttackPool[]
+++ take attack data from attacks.json
+++ create attacks using data
 */
 
 /// <summary>

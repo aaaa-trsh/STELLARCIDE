@@ -24,6 +24,7 @@ public class Dash : Attack
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
         float elapsedTime=0;
+        // TODO: give targetDistance a minimum
         Vector3 targetDistance = (target - origin) * Lifetime;
 
         while (elapsedTime < TravelSpeed)
