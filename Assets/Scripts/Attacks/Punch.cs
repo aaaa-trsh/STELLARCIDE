@@ -15,11 +15,21 @@ public class Punch : Attack
                   Damage damage,
                   float cooldown) : base(owner, damage, cooldown)
     {
-        AttackType = Type.MELEE;
+        AttackType = Type.UNARMED_MELEE;
+        if (Owner.transform.Find("MechVisual").TryGetComponent<Animator>(out Animator a))
+        {
+          Animator = a;  
+        }
+        AnimationName = "Punch";
     }
 
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
+        if (Animator) Animator.SetTrigger("executePunch");
+
+        LastExecute = Time.time;
+        yield return new WaitWhile(AnimatorIsPlaying);
+
         AudioManager.Instance.PlayPunchingSFX();
         DamageArea(range: 3, width: 3f);
 
