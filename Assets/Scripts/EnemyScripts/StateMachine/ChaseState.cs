@@ -37,7 +37,7 @@ public class ChaseState : IState
             Chase();
         }
 
-        if (controller.distanceToPlayer < 1)
+        if (controller.distanceToPlayer < 1 && punch != null)
         {
             controller.attackPlayer(punch);
         }
