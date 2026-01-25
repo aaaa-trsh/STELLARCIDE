@@ -14,13 +14,13 @@ public class ShipMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update() {
+    /*   void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
             transform.position = Vector3.zero;
             rb.linearVelocity = Vector3.zero;
         }
     }
-
+*/
     void FixedUpdate() {
         ApplySwingReduction();
         ApplyDriftReduction();

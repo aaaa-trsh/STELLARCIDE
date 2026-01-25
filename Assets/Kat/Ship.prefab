@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8797113400631551818}
   - component: {fileID: 5108155307476787186}
   - component: {fileID: 5802145788425174572}
+  - component: {fileID: -4007911139619669267}
+  - component: {fileID: -715266836809661982}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -54,7 +56,6 @@ MonoBehaviour:
   acceleration: 1.2
   swingReduceFactor: 2.5
   driftReduceFactor: 0
-  boost: 5
 --- !u!114 &8797113400631551818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,10 +71,12 @@ MonoBehaviour:
   thrustCamSpeed: 2
   shipMinCameraDist: 1
   shipMaxCameraDist: 4
+  shipTurnSpeed: 30
   mechCameraDist: 2
   mechTransitionLayer:
     serializedVersion: 2
     m_Bits: 0
+  mechTurnSpeed: 100
 --- !u!50 &5108155307476787186
 Rigidbody2D:
   serializedVersion: 5
@@ -138,6 +141,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0.16273607, y: -0.0084442105}
   m_Size: {x: 0.91461563, y: 0.8279704}
   m_Direction: 1
+--- !u!114 &-4007911139619669267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490058913558637734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b0ff47fc8a03c4a930a5635e5f5233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punchViz: {fileID: 0}
+--- !u!114 &-715266836809661982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490058913558637734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9612a334fb3c55409c321bb7416fc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1 &2634666201750429614
 GameObject:
   m_ObjectHideFlags: 0

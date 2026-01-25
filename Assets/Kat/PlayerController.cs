@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public enum PlayerMode {
@@ -30,6 +31,15 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 cursor;
     private Vector3 cursorOffset;
+    
+    private Rigidbody2D rb;
+
+    private bool controlLocked;
+    
+    /// <summary>
+    /// Changes the time that swapping forms leaves player control-locked
+    /// </summary>
+    [SerializeField] private float lockTime = 0.25f;
 
     private void Awake()
     {
@@ -42,8 +52,12 @@ public class PlayerController : MonoBehaviour
         initialCamTargetDist = camTarget.maxDistance;
         targetCameraDistance = initialCamTargetDist;
 
+        rb = GetComponent<Rigidbody2D>();
+        
         shipMovement = GetComponent<ShipMovement>();
         mechMovement = GetComponent<MechMovement>();
+
+        controlLocked = false;
     }
 
     void Update() {
@@ -57,6 +71,10 @@ public class PlayerController : MonoBehaviour
         cursor = CursorUtil.GetCursorPosition();
         cursorOffset = cursor - transform.position;
 
+        // check if FlyIn/Out state is active
+        if (controlLocked)
+            return;
+        
         // handle movement modes
         if (currentMode == PlayerMode.SHIP) {
             shipMovement.enabled = true;
@@ -85,7 +103,7 @@ public class PlayerController : MonoBehaviour
         } else {
             wishDir = Vector2.zero;
         }
-
+        
         shipMovement.SetWishDirection(wishDir);
 
         // move camera
@@ -98,6 +116,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void HandleMechControls() {
+        
         TurnToCursor(mechTurnSpeed);
 
         // directional input
@@ -105,8 +124,9 @@ public class PlayerController : MonoBehaviour
             Input.GetAxisRaw("Horizontal"), 
             Input.GetAxisRaw("Vertical")
         ).normalized;
+        
+            mechMovement.SetWishDirection(wishDir);
 
-        mechMovement.SetWishDirection(wishDir);
         targetCameraDistance = mechCameraDist;
     }
 
@@ -123,6 +143,7 @@ public class PlayerController : MonoBehaviour
     // very simple state transitions
     void OnTriggerEnter2D(Collider2D other) {
         if ((mechTransitionLayer & (1 << other.gameObject.layer)) != 0) {
+            FlyIn();
             currentMode = PlayerMode.MECH;
             EventBus.Instance.ChangeForm(false);
         }
@@ -130,11 +151,41 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other) {
         if ((mechTransitionLayer & (1 << other.gameObject.layer)) != 0) {
+            FlyOut();
             currentMode = PlayerMode.SHIP;
             EventBus.Instance.ChangeForm(true);
         }
     }
 
+    void FlyIn()
+    {
+        StartCoroutine("LockControls", lockTime);
+        
+        shipMovement.enabled = false;
+        
+        // transformation animation (ship to mech)
+        
+        // sound effect
+    }
+
+    void FlyOut()
+    {
+        StartCoroutine("LockControls", lockTime);
+
+        mechMovement.enabled = false;
+    
+        // transformation animation (mech to ship)
+
+        // sound effect
+    }
+
+    public IEnumerator LockControls(float duration)
+    {
+        controlLocked = true;
+        yield return new WaitForSeconds(duration);
+        controlLocked = false;
+    }
+    
     public PlayerMode GetPlayerMode() {
         return currentMode;
     }
