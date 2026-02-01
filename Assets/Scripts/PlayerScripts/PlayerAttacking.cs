@@ -16,20 +16,24 @@ public class PlayerAttacking : MonoBehaviour
 {
     [NonSerialized] public Attack BaseAttack;
     [NonSerialized] public Attack SecondaryAttack;
-    private GameObject self;
+    // private GameObject self;
 
-    void Start()
+    void Awake()
     {
         // seems a bit redundant but for some reason this solves a bug
-        self = gameObject;
+        // self = gameObject;
         // start off with a Shoot attack
-        BaseAttack = new Shoot(self,
+        BaseAttack = new Shoot(gameObject,
             damage: new Damage(10, Damage.Type.PHYSICAL),
             cooldown: 1f,
             travelSpeed: 30,
             lifetime: 2,
             piercing: true
         );
+    }
+
+    void Start()
+    {
         // this script now observes whenever the player changes forms and switches attacks accordingly
         EventBus.Instance.OnFormChange += (isShip) => SwapAttacks(isShip);
     }
@@ -42,7 +46,7 @@ public class PlayerAttacking : MonoBehaviour
             // this is how you actually attack
             if (BaseAttack.IsReady()) // check if in cooldown
             {
-                CoroutineManager.Instance.Run(BaseAttack.Execute(self.transform.position, self.transform.right));
+                CoroutineManager.Instance.Run(BaseAttack.Execute(gameObject.transform.position, gameObject.transform.right));
             }
         }
 
@@ -54,7 +58,7 @@ public class PlayerAttacking : MonoBehaviour
                 {
                     Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     mouseWorldPos.z = transform.position.z;
-                    CoroutineManager.Instance.Run(SecondaryAttack.Execute(self.transform.position, mouseWorldPos));
+                    CoroutineManager.Instance.Run(SecondaryAttack.Execute(gameObject.transform.position, mouseWorldPos));
                 }
             }
         }
@@ -64,7 +68,7 @@ public class PlayerAttacking : MonoBehaviour
     {
         if (isShip)
         {
-            BaseAttack = new Shoot(self,
+            BaseAttack = new Shoot(gameObject,
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 1f,
                 travelSpeed: 30,
@@ -75,12 +79,12 @@ public class PlayerAttacking : MonoBehaviour
         }
         else
         {
-            BaseAttack = new Punch(self,
+            BaseAttack = new Punch(gameObject,
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 0.5f
             );
 
-            SecondaryAttack = new Dash(self, 
+            SecondaryAttack = new Dash(gameObject, 
                 damage: new Damage(10, Damage.Type.PHYSICAL),
                 cooldown: 1f,
                 travelSpeed:0.25f, // looks like the max value before there is a pause after a dash

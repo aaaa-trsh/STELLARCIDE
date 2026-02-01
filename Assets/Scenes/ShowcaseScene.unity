@@ -2044,7 +2044,7 @@ SpriteRenderer:
   m_Size: {x: 100, y: 100}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1177199498
@@ -2708,7 +2708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 490058913558637734, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: m_Name
-      value: Player (kat's mvmt stuff)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 490058913558637734, guid: 1fef895c7dfca4342959e25e6fcfa900, type: 3}
       propertyPath: m_IsActive
