@@ -1,0 +1,22 @@
+{
+    "charge_up":{
+        "name": "Charge Up",
+        "description": "Build up attacks to deal more damage"
+    },
+    "double_time":{
+        "name": "Double Time",
+        "description": "Attacks now trigger twice"
+    },
+    "sword":{
+        "name": "Sword",
+        "description": "Upgrade Punch to an armed melee attack"
+    },
+    "barrel_roll":{
+        "name": "Barrel Roll",
+        "description": "Strafe in your ship form"
+    },
+    "homing_missile":{
+        "name": "Homing Missile",
+        "description": "As a mech, gain a new attack. As a ship, your projectiles now track targets"
+    }
+}

@@ -13,31 +13,37 @@ public class Dash : Attack
     public Dash(GameObject owner,
                   Damage damage,
                   float cooldown,
+                  float travelSpeed,
                   float lifetime) : base(owner, damage, cooldown)
     {
         AttackType = Type.DASH;
         Lifetime = lifetime;
+        TravelSpeed = travelSpeed;
     }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="origin"></param>
-    /// <param name="target"> target has to be the mouse position </param>
+    
     public override IEnumerator Execute(Vector3 origin, Vector3 target)
     {
-        Vector3 totalDistance = target - origin;
-        Vector3 targetDistance = totalDistance * Lifetime;
+        float elapsedTime=0;
+        // TODO: give targetDistance a minimum
+        Vector3 targetDistance = (target - origin) * Lifetime;
 
-        DamageArea(range: targetDistance.magnitude, width: 1.5f);
-        Owner.transform.position += targetDistance;
+        while (elapsedTime < TravelSpeed)
+        {
+            Owner.transform.position = Vector3.Lerp(Owner.transform.position, 
+                origin + targetDistance, 
+                elapsedTime/TravelSpeed
+            );
+            elapsedTime += Time.deltaTime;
+
+            LastExecute = Time.time;
+            yield return new WaitForEndOfFrame();
+        }
+
+        Owner.transform.position = origin + targetDistance;
+        DamageArea(range: -targetDistance.magnitude, width: 1.5f);
 
         LastExecute = Time.time;
         yield return new WaitForEndOfFrame();
     }
 
-    void DashAction()
-    {
-        
-    }
 }

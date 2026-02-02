@@ -1,0 +1,50 @@
+{
+    "punch":{
+        "player_state": "mech",
+        "name": "Fist",
+        "description": "Strike enemies close to you",
+        "damage":{
+            "amount": "10",
+            "type": "unarmed_melee"
+        },
+        "cooldown": "0.5"
+    },
+
+    "shoot":{
+        "player_state": "ship",
+        "name": "Shoot",
+        "description": "Strike from a safe distance",
+        "damage":{
+            "amount": "10",
+            "type": "ranged"
+        },
+        "cooldown": "0.5",
+        "travel_speed": "30",
+        "lifetime": "2",
+        "piercing": "true"
+    },
+
+    "dash":{
+        "player_state": "mech",
+        "name": "Dash",
+        "description": "Perform a quick dash toward your mouse and deal damage on the way",
+        "damage":{
+            "amount": "10",
+            "type": "armed_melee"
+        },
+        "cooldown": "0.5",
+        "travel_speed": "0.25",
+        "lifetime": "1"
+    },
+
+    "sword":{
+        "player_state": "mech",
+        "name": "Sword",
+        "description": "Cut down enemies in front of you",
+        "damage":{
+            "amount": "10",
+            "type": "armed_melee"
+        },
+        "cooldown":0.5
+    }
+}
