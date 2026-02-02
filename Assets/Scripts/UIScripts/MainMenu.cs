@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject mainMenu;
     public GameObject volumeMenu;
+    public GameObject creditsMenu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,7 +43,7 @@ public class MainMenu : MonoBehaviour
     {
         volumeMenu.SetActive(false);
         optionsMenu.SetActive(true);
-    }  
+    }
 
     public void quitGame()
     {

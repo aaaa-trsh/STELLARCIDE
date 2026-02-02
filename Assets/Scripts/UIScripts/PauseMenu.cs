@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool optionsFromGame = false;
     void Awake()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
     }
 
     public void ReturnToMainMenu()
@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
 
         if (!UITest.gameActive)
         {
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
         }
     }
 }
