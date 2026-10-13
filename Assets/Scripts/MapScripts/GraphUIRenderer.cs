@@ -190,7 +190,7 @@ namespace MapScripts
             GenNode selected = graphRef.Nodes[id];
             
             // grab difficulty and description
-            missionPanel.description.text =  $"{selected.Description} {selected.Type}";
+            missionPanel.description.text =  $"{selected.Type} MISSION\n\nMISSION REPORT\n\n{selected.Description}";
             missionPanel.scoreMult.text =  $"DIFFICULTY\nMULTIPLIER:\n{1 + selected.Difficulty * .5}X";
             missionPanel.currentNodeID = id;
             missionPanel.gameObject.SetActive(true);  

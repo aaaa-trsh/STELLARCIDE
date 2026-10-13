@@ -719,12 +719,31 @@ MonoBehaviour:
   currentRoot:
     nodes: []
     edges: []
+  desc:
+    origin: []
+    civilian: []
+    missionCommand: []
+    enemyDesc: []
+    color: []
+    phys: []
+    star: []
+    colorShout: []
+    rd: []
+    rdphys: []
+    rdabi: []
+    rg: []
+    rgphys: []
+    rgabi: []
+    yd: []
+    ydphys: []
+    ydabi: []
   maxDepth: 8
   maxWidth: 4
   minWidth: 2
+  descFile: {fileID: 4900000, guid: b79075367f8445908caaa0efd61259f4, type: 3}
+  descPath: SavedFiles/DescriptionMaster
   fileToReadWrite: 
   fileName: PlayerMapPosition.txt
-  fullPathToFile: Assets/Resources/SavedFiles/PlayerMapPosition.json
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

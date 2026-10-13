@@ -1,0 +1,18 @@
+{
+"origin": ["#civilian#", "#mission_command#"],
+"civilian":["HELP, HELP – THERE'S A- SEEMS TO BE– #enemy_desc# – (end of report)", "PLEA– I'M STUC– I CA– IT – IT’S– #color# – (end of report)", "#color_shout# - (end of report)", "HELP ME! THERE'S A BIG #enemy_desc# AT–! PLEASE SEND HELP, ANYTHING– (end of report)"],
+"mission_command": ["Mayda- We have encountered {static}. I repeat, we have encountered –#star#. We request backup as soon as possible. Over.", "MAYDAY! REQUESTING BACKUP IMMEDIATELY! WE ARE UNDER ATTACK BY #star#!", "Mayday, mayday! We nee- We request weapons we do- currently don’t have! There’s #star#! Over!", "— WE HA—\nLOST — #star# — PLEA— HEL—"],
+"enemy_desc": ["#rd#", "#rg#", "#yd#"],
+"color":["RED", "YELLOW"],
+"star": ["RED DWARVES", "A RED GIANT", "YELLOW DWARVES"],
+"color_shout":["#rd_phys# – IT'S COM– IT'S – RED –", "#rg_phys# – IT'S COM– IT'S – THE COLO- RED –", "#yd_phys# – IT'S COM– IT'S – THE COLO– YELLOW–"],
+"rd": ["– #rd_phys# – PEOPLE HAVE DIED – #rd_abi#"],
+"rd_phys":["BLINDING", "BRIGHT", "BIG", "TOUGH SHELLS"],
+"rd_abi":["SEEM– AIMLESS", "TOO –NY OF THEM, SPIT– ACID"],
+"rg": ["– #rg_phys# – PEOPLE HAVE DIED – #rg_abi#"],
+"rg_phys":["WRONG", "LIKE A WORM", "TOO BIG", "UNCANNY", "MULTIPLE", "HUGE"],
+"rg_abi":["CUNNING", "OVERWHELMED US", "CONSTRICTS"],
+"yd": ["– #yd_phys# – PEOPLE HAVE DIED – #yd_abi#"],
+"yd_phys":["CAT-LIKE", "EYES GLOW–", "HARD TO TRACK",  "LION", "SHARP CLAWS", "BIG TEETH", "YELLOW BLUR"],
+"yd_abi":["QUICK", "FAST REFLEXES", "MOVES IN AND OUT–”, “BLINK– OF –N EYE"]
+}

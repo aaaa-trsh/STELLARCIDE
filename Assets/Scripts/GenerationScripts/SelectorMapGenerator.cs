@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using GenerationScripts;
 using MapScripts;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
@@ -115,17 +116,22 @@ public class SelectorMapGenerator : MonoBehaviour
     
     public GenGraph graph;
     public Root currentRoot;
+    public Description desc;
     [SerializeField] private int maxDepth = 8;
     [SerializeField] private int maxWidth = 4;
     [SerializeField] private int minWidth = 2;
 
+    public TextAsset descFile;
+    public string descPath = "SavedFiles/DescriptionMaster";
     public string fileToReadWrite = "";
     public string fileName = "PlayerMapPosition.txt";
-    public string fullPathToFile;
     
     private void Start()
     {
-        fullPathToFile = Application.persistentDataPath + "/PlayerMapPosition.txt";
+        descFile = Resources.Load<TextAsset>(descPath);
+        desc = JsonConvert.DeserializeObject<Description>(descFile.text);
+        
+        // root generation
         if (PlayerPrefs.GetInt("NewGame") == 1) ClearJson();
         currentRoot = ReadFromFile();
         Generate();
@@ -137,7 +143,8 @@ public class SelectorMapGenerator : MonoBehaviour
         if (currentRoot.edges.Count == 0)
         {
             Random rand = new Random();
-            GenNode root = new GenNode("0", "root", 0, 0, 0, "test description");
+            DescriptionFormatter df = new DescriptionFormatter();
+            GenNode root = new GenNode("0", "root", 0, 0, 0, df.ReturnRandomDescription(desc, "origin"));
             graph.AddNode(root);
             currentRoot.nodes.Add(root);
             int nodeId = 1;
@@ -151,8 +158,8 @@ public class SelectorMapGenerator : MonoBehaviour
                 {
                     difficulty = rand.Next(0, 5);
                     string roomType = rand.Next(0, 2) == 0 ? "Survival" : "Exterminate";
-                    currentRoot.nodes.Add(new GenNode($"{nodeId}", roomType, width, depth, difficulty, "test description"));
-                    graph.AddNode(new GenNode($"{nodeId}", roomType, width, depth, difficulty, "test description"));
+                    currentRoot.nodes.Add(new GenNode($"{nodeId}", roomType, width, depth, difficulty, df.ReturnRandomDescription(desc, "origin")));
+                    graph.AddNode(new GenNode($"{nodeId}", roomType, width, depth, difficulty, df.ReturnRandomDescription(desc, "origin")));
                     nodeId++;
                 }
 
@@ -172,8 +179,8 @@ public class SelectorMapGenerator : MonoBehaviour
 
             difficulty = 4;
             //create end node (id: ?, type: end, width: ?, depth: max_depth-1)
-            graph.AddNode(new GenNode($"{nodeId}", "end", 0, maxDepth - 1, difficulty, "test description"));
-            currentRoot.nodes.Add(new GenNode($"{nodeId}", "end", 0, maxDepth - 1, difficulty, "test description"));
+            graph.AddNode(new GenNode($"{nodeId}", "end", 0, maxDepth - 1, difficulty, df.ReturnRandomDescription(desc, "origin")));
+            currentRoot.nodes.Add(new GenNode($"{nodeId}", "end", 0, maxDepth - 1, difficulty, df.ReturnRandomDescription(desc, "origin")));
 
             // re-organize nodes based on depth
             Dictionary<int, List<GenNode>> nodesByDepth = new Dictionary<int, List<GenNode>>();
@@ -322,7 +329,7 @@ public class SelectorMapGenerator : MonoBehaviour
     public void WriteToFile(Root root)
     {
         string save = JsonConvert.SerializeObject(root);
-        Debug.Log(save);
+        //Debug.Log(save);
         DataHandler.saveData(save, fileName);
     }
 

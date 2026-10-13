@@ -1825,7 +1825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1351ead4986d54dbd569093d3487ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keycode: 113
+  upgradeCooldown: 0
   image: {fileID: 5034606470242246226}
 --- !u!1 &2545269883267688187
 GameObject:
@@ -5149,7 +5149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1351ead4986d54dbd569093d3487ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keycode: 101
+  upgradeCooldown: 1
   image: {fileID: 544115290440060138}
 --- !u!1 &6436621500855408052
 GameObject:

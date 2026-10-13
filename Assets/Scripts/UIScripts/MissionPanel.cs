@@ -18,12 +18,6 @@ public class MissionPanel : MonoBehaviour
         mapGenerator = FindAnyObjectByType<SelectorMapGenerator>();
     }
 
-    // TODO use grammars to put descriptions of nodes into the map generator
-    public void GenerateMissionDescription()
-    {
-        
-    }
-
     public void MissionSelected()
     {
         GameManager.Instance.difficultySum += mapGenerator.graph.Nodes[currentNodeID].Difficulty + 1;

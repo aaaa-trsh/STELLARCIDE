@@ -3260,6 +3260,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 312059808781606635, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 312059808781606635, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 312059808781606635, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 312059808781606635, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846916812745527676, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: upgradeCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4938410786048403251, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3271,6 +3291,22 @@ PrefabInstance:
     - target: {fileID: 7885863417994775163, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725793573904069850, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725793573904069850, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725793573904069850, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725793573904069850, guid: 2151be5f19fa77549a34a4dedbfa705d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

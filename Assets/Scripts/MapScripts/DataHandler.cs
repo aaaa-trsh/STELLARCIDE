@@ -28,7 +28,7 @@ public class DataHandler
         try
         {
             File.WriteAllBytes(tempPath, jsonByte);
-            Debug.Log("Saved Data to: " + tempPath.Replace("/", "\\"));
+            //Debug.Log("Saved Data to: " + tempPath.Replace("/", "\\"));
         }
         catch (Exception e)
         {
@@ -47,7 +47,7 @@ public class DataHandler
         //Exit if Directory or File does not exist after creating it
         if (!Directory.Exists(Path.GetDirectoryName(tempPath)))
         {
-            Debug.Log($"{tempPath}");
+            //Debug.Log($"{tempPath}");
             Debug.LogWarning("Directory does not exist");
             Directory.CreateDirectory(Path.GetDirectoryName(tempPath));
             return null;
@@ -55,8 +55,8 @@ public class DataHandler
 
         if (!File.Exists(tempPath))
         {
-            Debug.Log($"{tempPath}");
-            Debug.Log("File does not exist");
+            //Debug.Log($"{tempPath}");
+            //Debug.Log("File does not exist");
             return null;
         }
 
@@ -65,8 +65,8 @@ public class DataHandler
         try
         {
             jsonByte = File.ReadAllBytes(tempPath);
-            Debug.Log("Loaded Data from: " + tempPath.Replace("/", "\\"));
-            Debug.Log(jsonByte);
+            //Debug.Log("Loaded Data from: " + tempPath.Replace("/", "\\"));
+            //Debug.Log(jsonByte);
         }
         catch (Exception e)
         {
@@ -79,7 +79,7 @@ public class DataHandler
         jsonData = jsonData.Replace("\\", "");
         jsonData = jsonData.Remove(0,1);
         jsonData = jsonData.Remove(jsonData.Length-1,1);
-        Debug.Log(jsonData);
+        //Debug.Log(jsonData);
 
         //Convert to Object
         return jsonData;
@@ -97,21 +97,21 @@ public class DataHandler
         //Exit if Directory or File does not exist
         if (!Directory.Exists(Path.GetDirectoryName(tempPath)))
         {
-            Debug.LogWarning("delete cant work : Directory");
+            //Debug.LogWarning("delete cant work : Directory");
             return false;
         }
 
         Debug.Log($"{tempPath}");
         if (!File.Exists(tempPath))
         {
-            Debug.Log("delete cant work : File");
+            //Debug.Log("delete cant work : File");
             return false;
         }
 
         try
         {
             File.Delete(tempPath);
-            Debug.Log("Data deleted from: " + tempPath.Replace("/", "\\"));
+            //Debug.Log("Data deleted from: " + tempPath.Replace("/", "\\"));
             success = true;
         }
         catch (Exception e)
