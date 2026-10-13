@@ -9,11 +9,56 @@ EditorBuildSettings:
     path: Assets/Scenes/Attacks Testing.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: b8455312eeb9a0546a31c5c4381afeda
+  - enabled: 0
     path: Assets/Scenes/ShowcaseScene.unity
     guid: c359c833537298146a7c27082bcfc415
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 4b819b590da9d74418073d748432cfa6
+  - enabled: 1
+    path: Assets/Scenes/Menus/Credits.unity
+    guid: ed44f7a2ed89e3b4f80d6e953e107c56
+  - enabled: 1
+    path: Assets/Scenes/Menus/Options.unity
+    guid: 91d7276549910e04eabe25bbaa4a37c6
+  - enabled: 1
+    path: Assets/Scenes/Menus/Leaderboard.unity
+    guid: 97fcbf85d2d803e48b33b18abfa4980c
+  - enabled: 1
+    path: Assets/Scenes/Missions/BasicMission.unity
+    guid: 3448d1f1f6c30044d9b0f3ff37bde3d7
+  - enabled: 1
+    path: Assets/Scenes/AreaSelectionMap.unity
+    guid: 94bcbeda5de27494c89ec18b8192f2be
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 790ef9add0ee0794ba3e3ca16e61a776
+  - enabled: 1
+    path: Assets/Scenes/TutorialMapSelect.unity
+    guid: a05fc1e52b05eb64eba9af2a59e118b5
+  - enabled: 1
+    path: Assets/Scenes/UpgradeTutorial.unity
+    guid: 7c19080908ccf264a9fa9693cb16322b
+  - enabled: 1
+    path: Assets/Scenes/Menus/LeaderboardMenu.unity
+    guid: 07131766fb8c36e4b8f41058bf4b05d0
+  - enabled: 1
+    path: Assets/Scenes/Missions/AsteroidHeavy.unity
+    guid: 8cbe040de15ac094588122938d15f368
+  - enabled: 1
+    path: Assets/Scenes/Missions/AsteroidLight.unity
+    guid: 13397a55e4c68e54c8a1a21fbc3ffc9f
+  - enabled: 1
+    path: Assets/Scenes/Missions/Central.unity
+    guid: 9282a1c44d903844a88822721552a042
+  - enabled: 1
+    path: Assets/Scenes/Missions/HalfNHalf.unity
+    guid: bf02986099dfd08459d06b18264d5da8
+  - enabled: 1
+    path: Assets/Scenes/UpgradeSelectorTesting.unity
+    guid: 788e4c867d6b0b04a8566f765cb23384
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: af7c18e6c6b58cc4a8fe904c4394dbc2, type: 3}
   m_UseUCBPForAssetBundles: 0

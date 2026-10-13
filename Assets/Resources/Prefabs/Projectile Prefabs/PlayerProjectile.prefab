@@ -169,7 +169,9 @@ MonoBehaviour:
   speed: 10
   lifetime: 0
   piercing: 0
+  homing: 0
   owner: {fileID: 0}
+  target: {fileID: 0}
 --- !u!50 &-3228429747860222878
 Rigidbody2D:
   serializedVersion: 5
@@ -213,7 +215,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

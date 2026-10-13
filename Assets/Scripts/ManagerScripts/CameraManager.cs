@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    // Update is called once per frame
+    CinemachineBrain cb;
+    void Awake()
+    {
+        cb = GetComponent<CinemachineBrain>();
+    }
+    
     void Update()
     {
-        gameObject.GetComponent<CinemachineBrain>().enabled = UITest.gameActive ? true : false;
+        cb.enabled = GameManager.Instance.GameActive ? true : false;
     }
 }

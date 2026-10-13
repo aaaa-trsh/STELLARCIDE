@@ -4,13 +4,14 @@ public class ProjectileManager : MonoBehaviour
 {
     GameObject playerProjectile;
     GameObject enemyProjectile;
+    GameObject homingMissile;
     
     void Start()
     {
         GameManager.Instance.ProjectileManager = this;
         playerProjectile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/PlayerProjectile", typeof(GameObject));
         enemyProjectile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/RedDwarfProjectile", typeof(GameObject));
-
+        homingMissile = (GameObject)Resources.Load("Prefabs/Projectile Prefabs/HomingMissile", typeof(GameObject));
     }
 
     public void CreateProjectile(GameObject owner,
@@ -18,6 +19,7 @@ public class ProjectileManager : MonoBehaviour
                           float speed,
                           float lifetime,
                           bool piercing,
+                          bool homing,
                           float sizeScalar,
                           Vector3 origin,
                           Vector3 target)
@@ -33,6 +35,7 @@ public class ProjectileManager : MonoBehaviour
         pc.speed = speed;
         pc.SetLifetime(lifetime);
         pc.piercing = piercing;
+        pc.homing =  homing;
         pc.owner = owner;
 
         newProjectile.transform.localScale *= sizeScalar;

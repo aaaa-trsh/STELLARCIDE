@@ -2,43 +2,29 @@ using UnityEngine;
 
 public class Tail : MonoBehaviour
 {
-    public Transform target;       // The segment in front
-    public float followDistance = 0.5f;
-    public float followSpeed = 5f; // How fast the segment catches up
+    public Transform target;
+    public float followDistance = 20.0f;
+    public float followSpeed = 5f;
 
-    private Vector2 lastPos;
-    public bool freeze;
-
-    void Start()
-    {
-        lastPos = transform.position;
-    }
+    public bool freeze = false;
 
     void Update()
     {
         if (!target || freeze) return;
 
-        // Compute the desired position at the correct follow distance
-        Vector2 dir = (Vector2)(target.position - transform.position);
-        Vector2 desiredPos = (Vector2)target.position - dir.normalized * followDistance;
 
-        // Only move forward (prevents tail from going backward)
-        Vector2 delta = desiredPos - lastPos;
-        Vector2 forwardDir = dir.normalized;
-        float forwardMovement = Vector2.Dot(delta, forwardDir);
-
-        if (forwardMovement > 0f)
+        float actualDistance = Vector2.Distance(transform.position, target.position);
+        if (actualDistance > followDistance)
         {
-            Vector2 move = forwardDir * forwardMovement;
-
-            // Smoothly interpolate instead of snapping
-            transform.position = Vector2.MoveTowards(transform.position, lastPos + move, followSpeed * Time.deltaTime);
+            var followToCurrent = (transform.position - target.position).normalized;
+            followToCurrent.Scale(new Vector2(followDistance, followDistance));
+            transform.position = target.position + followToCurrent;
         }
 
-        // Rotate toward the segment in front
-        transform.up = dir.normalized;
+        Vector2 direction = target.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // Update last position
-        lastPos = transform.position;
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, followSpeed * 10 * Time.deltaTime);
     }
 }

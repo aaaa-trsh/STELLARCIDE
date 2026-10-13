@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 /// <summary>
@@ -11,19 +12,46 @@ public class ProjectileController : MonoBehaviour
     public float speed;
     public float lifetime;
     public bool piercing;
+    public bool homing;
     public GameObject owner;
+    public Transform target;
+    
+    private Rigidbody2D rb;
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
+    // TODO: pool projectiles
     void Update()
     {
         if (owner == null)
         {
             Destroy(gameObject);
         }
-        
-        transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0), Space.Self);
     }
-    
+
+    private void FixedUpdate()
+    {
+        if (homing)
+        {
+            HandleHoming();
+            return;
+        }
+        rb.linearVelocity = transform.right * speed;
+    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,11 +62,15 @@ public class ProjectileController : MonoBehaviour
         if (otherObject.CompareTag("Entity") || otherObject.CompareTag("Player"))
         {
             // make sure the entity hit isnt on the same team
-            if (owner.GetComponent<Entity>().healthController.team == otherObject.GetComponent<Entity>().healthController.team)
-                return;
-            
-            // deal damage
-            other.GetComponent<Entity>().healthController.TakeDamage(damage);
+            if (otherObject.TryGetComponent<Entity>(out Entity entity))
+            {
+                if (owner.GetComponent<Entity>().healthController.team == entity.healthController.team)
+                {
+                    return;
+                }
+
+                entity.healthController.TakeDamage(damage);
+            }
             
             // update health
             if (other.TryGetComponent(out EnemyHealth enemyHealth))
@@ -52,6 +84,44 @@ public class ProjectileController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // 1. Check area in r radius for potential enemies
+    // 2. Choose closest enemy
+    // 3. Move towards in arc
+    // 4. Else, continue forward
+    public void HandleHoming()
+    {
+        float radius = 10f;
+        float turnSpeed = 200f;
+        
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        foreach (Collider2D collide in colliders)
+        {
+            //print(collide);
+            // collide isn't an Entity
+            if (!collide.CompareTag("Entity"))
+                continue;
+            // collide is on same team
+            if (owner.GetComponent<Entity>().healthController.team ==
+                collide.GetComponent<Entity>().healthController.team)
+                continue;
+            // target doesn't exist
+            if (!target) 
+                target = collide.transform;
+            // closer target
+            if (Vector2.Distance(transform.position, collide.transform.position) < Vector2.Distance(transform.position, target.transform.position))
+                target = collide.transform;
+        }
+        
+        if (target)
+        {
+            Vector2 direction = (target.transform.position - transform.position).normalized;
+            float rotation = Vector3.Cross(direction, transform.right).z;
+            rb.angularVelocity = -rotation * turnSpeed;
+            //print(target.gameObject);
+        }
+        
+        rb.linearVelocity = transform.right * speed;
+    }
 
     public void SetLifetime(float time)
     {
@@ -62,6 +132,7 @@ public class ProjectileController : MonoBehaviour
     IEnumerator Expire(float time)
     {
         yield return new WaitForSeconds(time);
+        StopAllCoroutines();
         Destroy(gameObject);
     }
 }

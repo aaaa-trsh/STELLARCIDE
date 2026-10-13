@@ -9,16 +9,8 @@ public class PlayerHealth : Entity
 {
     [SerializeField] private int health;
     
-    void Start()
+    void Awake()
     {
         healthController = new HealthOwner(health, HealthOwner.Team.PLAYER, gameObject);
-    }
-
-    private void Update()
-    {
-        if (healthController.hp <= 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        } 
     }
 }

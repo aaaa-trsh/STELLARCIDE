@@ -1,0 +1,591 @@
+fileFormatVersion: 2
+guid: 3fbc049877a4d4445aa5de20c1400413
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6125539563296218618
+    second: red dwarf bite (1)_0
+  - first:
+      213: 4526549957978640005
+    second: red dwarf bite (1)_1
+  - first:
+      213: 5982153163171748369
+    second: red dwarf bite (1)_2
+  - first:
+      213: 313689693787178958
+    second: red dwarf bite (1)_3
+  - first:
+      213: 2545821766670955251
+    second: red dwarf bite (1)_4
+  - first:
+      213: 2804774798072649465
+    second: red dwarf bite (1)_5
+  - first:
+      213: 6094873712359172516
+    second: red dwarf bite (1)_6
+  - first:
+      213: 3000381629763209052
+    second: red dwarf bite (1)_7
+  - first:
+      213: -6947249129350289523
+    second: red dwarf bite (1)_8
+  - first:
+      213: -1041693358913524279
+    second: red dwarf bite (1)_9
+  - first:
+      213: -4927731806434212029
+    second: red dwarf bite (1)_10
+  - first:
+      213: 7411092705579066053
+    second: red dwarf bite (1)_11
+  - first:
+      213: -2141184158952256000
+    second: red dwarf bite (1)_12
+  - first:
+      213: -2469999172979936320
+    second: red dwarf bite (1)_13
+  - first:
+      213: 9215796248817572573
+    second: red dwarf bite (1)_14
+  - first:
+      213: -7558429632873874450
+    second: red dwarf bite (1)_15
+  - first:
+      213: -6579328400170174558
+    second: red dwarf bite (1)_16
+  - first:
+      213: 2796434679719480942
+    second: red dwarf bite (1)_17
+  - first:
+      213: 9119591247218440473
+    second: red dwarf bite (1)_18
+  - first:
+      213: 2970440805833878012
+    second: red dwarf bite (1)_19
+  - first:
+      213: -4003591048831684078
+    second: red dwarf bite (1)_20
+  - first:
+      213: 4438816466402402106
+    second: red dwarf bite (1)_21
+  - first:
+      213: -392866634107091661
+    second: red dwarf bite (1)_22
+  - first:
+      213: -3965865492799142066
+    second: red dwarf bite (1)_23
+  - first:
+      213: -2415910295087123150
+    second: red dwarf bite (1)_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red dwarf bite (1)_0
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 15736
+        width: 1503
+        height: 1271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602a020c836bdfaa0800000000000000
+      internalID: -6125539563296218618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_1
+      rect:
+        serializedVersion: 2
+        x: 3726
+        y: 15736
+        width: 1490
+        height: 1271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e406f343981de30800000000000000
+      internalID: 4526549957978640005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_2
+      rect:
+        serializedVersion: 2
+        x: 6818
+        y: 15736
+        width: 1301
+        height: 1267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ad4da6b90e40350800000000000000
+      internalID: 5982153163171748369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_3
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 12736
+        width: 1301
+        height: 1267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7c2ef4d137a5400800000000000000
+      internalID: 313689693787178958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_4
+      rect:
+        serializedVersion: 2
+        x: 3818
+        y: 12736
+        width: 1301
+        height: 1267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f231ef8863945320800000000000000
+      internalID: 2545821766670955251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_5
+      rect:
+        serializedVersion: 2
+        x: 6818
+        y: 12736
+        width: 1301
+        height: 1267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6961a81df8ce620800000000000000
+      internalID: 2804774798072649465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_6
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 9736
+        width: 1301
+        height: 1267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a9e8007957559450800000000000000
+      internalID: 6094873712359172516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_7
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 9737
+        width: 1284
+        height: 1480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57c4a0123f73a920800000000000000
+      internalID: 3000381629763209052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_9
+      rect:
+        serializedVersion: 2
+        x: 6837
+        y: 9736
+        width: 1284
+        height: 1472
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd6311c8692b81f0800000000000000
+      internalID: -1041693358913524279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_11
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 6736
+        width: 1280
+        height: 1324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c26781dc8d79d660800000000000000
+      internalID: 7411092705579066053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_12
+      rect:
+        serializedVersion: 2
+        x: 3843
+        y: 6736
+        width: 1272
+        height: 1324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00e05f61a5cf842e0800000000000000
+      internalID: -2141184158952256000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_13
+      rect:
+        serializedVersion: 2
+        x: 7145
+        y: 7325
+        width: 661
+        height: 735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3b50bb6dcc8bdd0800000000000000
+      internalID: -2469999172979936320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 4325
+        width: 660
+        height: 735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb34c09b401b1790800000000000000
+      internalID: -7558429632873874450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_17
+      rect:
+        serializedVersion: 2
+        x: 4145
+        y: 4325
+        width: 656
+        height: 735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e434a668eeec620800000000000000
+      internalID: 2796434679719480942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_19
+      rect:
+        serializedVersion: 2
+        x: 7114
+        y: 4353
+        width: 728
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9ad02cc20293920800000000000000
+      internalID: 2970440805833878012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_21
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1353
+        width: 731
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fd11fee08d99d30800000000000000
+      internalID: 4438816466402402106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red dwarf bite (1)_23
+      rect:
+        serializedVersion: 2
+        x: 4114
+        y: 1353
+        width: 726
+        height: 713
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e474abaa85a66f8c0800000000000000
+      internalID: -3965865492799142066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d01416e4663c0cd4b9d2ee4e9d9afa02
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      red dwarf bite (1)_0: -6125539563296218618
+      red dwarf bite (1)_1: 4526549957978640005
+      red dwarf bite (1)_10: -4927731806434212029
+      red dwarf bite (1)_11: 7411092705579066053
+      red dwarf bite (1)_12: -2141184158952256000
+      red dwarf bite (1)_13: -2469999172979936320
+      red dwarf bite (1)_14: 9215796248817572573
+      red dwarf bite (1)_15: -7558429632873874450
+      red dwarf bite (1)_16: -6579328400170174558
+      red dwarf bite (1)_17: 2796434679719480942
+      red dwarf bite (1)_18: 9119591247218440473
+      red dwarf bite (1)_19: 2970440805833878012
+      red dwarf bite (1)_2: 5982153163171748369
+      red dwarf bite (1)_20: -4003591048831684078
+      red dwarf bite (1)_21: 4438816466402402106
+      red dwarf bite (1)_22: -392866634107091661
+      red dwarf bite (1)_23: -3965865492799142066
+      red dwarf bite (1)_24: -2415910295087123150
+      red dwarf bite (1)_3: 313689693787178958
+      red dwarf bite (1)_4: 2545821766670955251
+      red dwarf bite (1)_5: 2804774798072649465
+      red dwarf bite (1)_6: 6094873712359172516
+      red dwarf bite (1)_7: 3000381629763209052
+      red dwarf bite (1)_8: -6947249129350289523
+      red dwarf bite (1)_9: -1041693358913524279
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

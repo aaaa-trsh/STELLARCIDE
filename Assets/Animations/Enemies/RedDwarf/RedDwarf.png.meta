@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: f5f26dc0f6b32df4bbecc2e47184ce73
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5568589674029779244
+    second: RedDwarf_0
+  - first:
+      213: -8125380145856272280
+    second: RedDwarf_1
+  - first:
+      213: -2031262091719708572
+    second: RedDwarf_2
+  - first:
+      213: -3553425828618943850
+    second: RedDwarf_3
+  - first:
+      213: -2968482179057422671
+    second: RedDwarf_4
+  - first:
+      213: 1521458819474633659
+    second: RedDwarf_5
+  - first:
+      213: -7957526268690056440
+    second: RedDwarf_6
+  - first:
+      213: -658743112375498121
+    second: RedDwarf_7
+  - first:
+      213: -6775211791856326448
+    second: RedDwarf_8
+  - first:
+      213: -3267224928877883007
+    second: RedDwarf_9
+  - first:
+      213: -4887382162066686501
+    second: RedDwarf_10
+  - first:
+      213: 2429786216011748855
+    second: RedDwarf_11
+  - first:
+      213: -6625992356337163370
+    second: RedDwarf_12
+  - first:
+      213: 6261767475387009492
+    second: RedDwarf_13
+  - first:
+      213: 7145460963538092297
+    second: RedDwarf_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedDwarf_0
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 5381
+        width: 1248
+        height: 1426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3327341226643489145b24965beeca
+      internalID: 554031699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_1
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 5377
+        width: 1250
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119ffb79b75ec344f8b842774ee4b170
+      internalID: 200747055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_2
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 5350
+        width: 1249
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee96a11f7a46d204ab5d6c0f0e8423d0
+      internalID: 488878459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_3
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 3649
+        width: 1249
+        height: 1424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e0b0313a324c443b03d6cfa406e890
+      internalID: 2079004921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_4
+      rect:
+        serializedVersion: 2
+        x: 2023
+        y: 3676
+        width: 1252
+        height: 1427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906b3e31045c48644811cf29537a847e
+      internalID: 228917764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_5
+      rect:
+        serializedVersion: 2
+        x: 3718
+        y: 3663
+        width: 1248
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384fefa105e6eb245a2e21195b057e8a
+      internalID: 623203043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_7
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1881
+        width: 1249
+        height: 1424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76820066f93254447a86ace66ede1174
+      internalID: -1349962575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_8
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 1884
+        width: 1249
+        height: 1426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e958604f11b6347b0431b122295b26
+      internalID: 642521989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_9
+      rect:
+        serializedVersion: 2
+        x: 3724
+        y: 1874
+        width: 1249
+        height: 1427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e79a851aa294f47b4733ffa434dd16
+      internalID: -1491305619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 187
+        width: 1252
+        height: 1424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0076a8f9f3277a34c95acb73bc434c30
+      internalID: 969141032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_12
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 187
+        width: 1249
+        height: 1427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dae9a691f8f7cb4ba3b8d797e9e410b
+      internalID: -1516333003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedDwarf_13
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 175
+        width: 1252
+        height: 1427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9755f93ba7582f04ca790eeea17ca43e
+      internalID: 1839959785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1aa70828ebfabe34d98ff64efa0ffd3d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RedDwarf_0: 554031699
+      RedDwarf_1: 200747055
+      RedDwarf_10: 969141032
+      RedDwarf_11: 2429786216011748855
+      RedDwarf_12: -1516333003
+      RedDwarf_13: 1839959785
+      RedDwarf_14: 7145460963538092297
+      RedDwarf_15: 1176220506
+      RedDwarf_2: 488878459
+      RedDwarf_3: 2079004921
+      RedDwarf_4: 228917764
+      RedDwarf_5: 623203043
+      RedDwarf_6: -7957526268690056440
+      RedDwarf_7: -1349962575
+      RedDwarf_8: 642521989
+      RedDwarf_9: -1491305619
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

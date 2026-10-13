@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: fc611489baf6e1244980528a68ffc901
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8990361781134649380
+    second: red giant bite_0
+  - first:
+      213: -8006360009185699740
+    second: red giant bite_1
+  - first:
+      213: -1696780329095271289
+    second: red giant bite_2
+  - first:
+      213: 2842202734475923452
+    second: red giant bite_3
+  - first:
+      213: -1652392666822875174
+    second: red giant bite_4
+  - first:
+      213: -3416557632768056904
+    second: red giant bite_5
+  - first:
+      213: 9752534581524399
+    second: red giant bite_6
+  - first:
+      213: -328272872578136677
+    second: red giant bite_7
+  - first:
+      213: 6091736717368473833
+    second: red giant bite_8
+  - first:
+      213: 7171884843754968566
+    second: red giant bite_9
+  - first:
+      213: -8239299895348536268
+    second: red giant bite_10
+  - first:
+      213: 8589161979580740506
+    second: red giant bite_11
+  - first:
+      213: 6378714114083209608
+    second: red giant bite_12
+  - first:
+      213: -8517965386267774740
+    second: red giant bite_13
+  - first:
+      213: -6926328781140549351
+    second: red giant bite_14
+  - first:
+      213: 8093132482486961143
+    second: red giant bite_15
+  - first:
+      213: -6250341602441460677
+    second: red giant bite_16
+  - first:
+      213: 2623900561890580334
+    second: red giant bite_17
+  - first:
+      213: -777203224347411912
+    second: red giant bite_18
+  - first:
+      213: 8363290690953936362
+    second: red giant bite_19
+  - first:
+      213: -1767814072120535854
+    second: red giant bite_20
+  - first:
+      213: -8768908624365387119
+    second: red giant bite_21
+  - first:
+      213: -8240725626334519153
+    second: red giant bite_22
+  - first:
+      213: -8778215255201380282
+    second: red giant bite_23
+  - first:
+      213: 4258125509026897442
+    second: red giant bite_24
+  - first:
+      213: 6689825429098902502
+    second: red giant bite_25
+  - first:
+      213: -5452681552214138995
+    second: red giant bite_26
+  - first:
+      213: -3028820336095606752
+    second: red giant bite_27
+  - first:
+      213: 132620512332781405
+    second: red giant bite_28
+  - first:
+      213: 9068258517874172386
+    second: red giant bite_29
+  - first:
+      213: 2445955850188040419
+    second: red giant bite_30
+  - first:
+      213: 9211974892808601175
+    second: red giant bite_31
+  - first:
+      213: -5432363253818514527
+    second: red giant bite_32
+  - first:
+      213: 4773530157889883780
+    second: red giant bite_33
+  - first:
+      213: -7262595098399112901
+    second: red giant bite_34
+  - first:
+      213: -336918734499080318
+    second: red giant bite_35
+  - first:
+      213: 9146606802329296686
+    second: red giant bite_36
+  - first:
+      213: 5436235834491593392
+    second: red giant bite_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red giant bite_0
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 12091
+        width: 2306
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42867ce286e24cc70800000000000000
+      internalID: 8990361781134649380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_2
+      rect:
+        serializedVersion: 2
+        x: 3345
+        y: 12093
+        width: 2306
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ce766d743d378e0800000000000000
+      internalID: -1696780329095271289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_4
+      rect:
+        serializedVersion: 2
+        x: 6345
+        y: 12091
+        width: 2305
+        height: 1161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7ef80df958119e0800000000000000
+      internalID: -1652392666822875174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_6
+      rect:
+        serializedVersion: 2
+        x: 9452
+        y: 12092
+        width: 2096
+        height: 1311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa73467e0e5a22000800000000000000
+      internalID: 9752534581524399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_8
+      rect:
+        serializedVersion: 2
+        x: 12563
+        y: 12083
+        width: 1873
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8b3ffd4423a8450800000000000000
+      internalID: 6091736717368473833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_10
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 9082
+        width: 1874
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c56db166028ad80800000000000000
+      internalID: -8239299895348536268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_12
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 9082
+        width: 1875
+        height: 1423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88143bdd0beb58850800000000000000
+      internalID: 6378714114083209608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_14
+      rect:
+        serializedVersion: 2
+        x: 6563
+        y: 8999
+        width: 1871
+        height: 1560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911ad8abbacb0ef90800000000000000
+      internalID: -6926328781140549351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_15
+      rect:
+        serializedVersion: 2
+        x: 9563
+        y: 8999
+        width: 1871
+        height: 1560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f38fc21d15905070800000000000000
+      internalID: 8093132482486961143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_16
+      rect:
+        serializedVersion: 2
+        x: 12563
+        y: 8999
+        width: 1871
+        height: 1560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3481a5ad635249a0800000000000000
+      internalID: -6250341602441460677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_17
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 5999
+        width: 1760
+        height: 1831
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e679f65b8a7f96420800000000000000
+      internalID: 2623900561890580334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_18
+      rect:
+        serializedVersion: 2
+        x: 3636
+        y: 5999
+        width: 1760
+        height: 1843
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83afb7609c1d635f0800000000000000
+      internalID: -777203224347411912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_19
+      rect:
+        serializedVersion: 2
+        x: 6636
+        y: 5999
+        width: 1760
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aedf3a3a290601470800000000000000
+      internalID: 8363290690953936362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_20
+      rect:
+        serializedVersion: 2
+        x: 9636
+        y: 5999
+        width: 1760
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4915ab7767777e0800000000000000
+      internalID: -1767814072120535854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_21
+      rect:
+        serializedVersion: 2
+        x: 12636
+        y: 5999
+        width: 1760
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19287d8d0149e4680800000000000000
+      internalID: -8768908624365387119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_22
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 2999
+        width: 1760
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f806fde34bf03ad80800000000000000
+      internalID: -8240725626334519153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_23
+      rect:
+        serializedVersion: 2
+        x: 3636
+        y: 2999
+        width: 1760
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6488ecffbb38d2680800000000000000
+      internalID: -8778215255201380282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_24
+      rect:
+        serializedVersion: 2
+        x: 6641
+        y: 2999
+        width: 1750
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ed3960796e71b30800000000000000
+      internalID: 4258125509026897442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_25
+      rect:
+        serializedVersion: 2
+        x: 9641
+        y: 2999
+        width: 1750
+        height: 1838
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3b0d698c807dc50800000000000000
+      internalID: 6689825429098902502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_26
+      rect:
+        serializedVersion: 2
+        x: 12790
+        y: 3250
+        width: 1420
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f53fe840f2454b0800000000000000
+      internalID: -5452681552214138995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_28
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 251
+        width: 1424
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57968f37a927d100800000000000000
+      internalID: 132620512332781405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_30
+      rect:
+        serializedVersion: 2
+        x: 3791
+        y: 249
+        width: 1423
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e82fb2f2e7c1f120800000000000000
+      internalID: 2445955850188040419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_32
+      rect:
+        serializedVersion: 2
+        x: 6791
+        y: 249
+        width: 1422
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3234d076e5c94b0800000000000000
+      internalID: -5432363253818514527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_34
+      rect:
+        serializedVersion: 2
+        x: 9791
+        y: 249
+        width: 1425
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b318d64ac34163b90800000000000000
+      internalID: -7262595098399112901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red giant bite_36
+      rect:
+        serializedVersion: 2
+        x: 12791
+        y: 249
+        width: 1439
+        height: 1591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f52090d664fee70800000000000000
+      internalID: 9146606802329296686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f953b84c70718044b2e6c2155c0abff
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      red giant bite_0: 8990361781134649380
+      red giant bite_1: -8006360009185699740
+      red giant bite_10: -8239299895348536268
+      red giant bite_11: 8589161979580740506
+      red giant bite_12: 6378714114083209608
+      red giant bite_13: -8517965386267774740
+      red giant bite_14: -6926328781140549351
+      red giant bite_15: 8093132482486961143
+      red giant bite_16: -6250341602441460677
+      red giant bite_17: 2623900561890580334
+      red giant bite_18: -777203224347411912
+      red giant bite_19: 8363290690953936362
+      red giant bite_2: -1696780329095271289
+      red giant bite_20: -1767814072120535854
+      red giant bite_21: -8768908624365387119
+      red giant bite_22: -8240725626334519153
+      red giant bite_23: -8778215255201380282
+      red giant bite_24: 4258125509026897442
+      red giant bite_25: 6689825429098902502
+      red giant bite_26: -5452681552214138995
+      red giant bite_27: -3028820336095606752
+      red giant bite_28: 132620512332781405
+      red giant bite_29: 9068258517874172386
+      red giant bite_3: 2842202734475923452
+      red giant bite_30: 2445955850188040419
+      red giant bite_31: 9211974892808601175
+      red giant bite_32: -5432363253818514527
+      red giant bite_33: 4773530157889883780
+      red giant bite_34: -7262595098399112901
+      red giant bite_35: -336918734499080318
+      red giant bite_36: 9146606802329296686
+      red giant bite_37: 5436235834491593392
+      red giant bite_4: -1652392666822875174
+      red giant bite_5: -3416557632768056904
+      red giant bite_6: 9752534581524399
+      red giant bite_7: -328272872578136677
+      red giant bite_8: 6091736717368473833
+      red giant bite_9: 7171884843754968566
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

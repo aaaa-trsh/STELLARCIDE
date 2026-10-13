@@ -5,12 +5,12 @@ using UnityEngine;
 /// </summary>
 public class EnemyHealth : Entity
 {
-    [SerializeField] private int maxHealth;
+    public int maxHealth;
     public EnemyHealthBar  healthBar;
     
     void Start()
     {
         healthController = new HealthOwner(maxHealth, HealthOwner.Team.ENEMY, gameObject);
-        healthBar.UpdateHealthBar(healthController.hp, maxHealth);
+        healthBar.UpdateHealthBar(healthController.hp, maxHealth *= SpawnerManager.Instance.healthMult);
     }
 }

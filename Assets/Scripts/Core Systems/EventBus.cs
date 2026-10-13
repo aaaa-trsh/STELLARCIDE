@@ -50,13 +50,29 @@ public class EventBus
     }
 
     #region Actions
-    public event Action<bool> OnFormChange;
+    public event Action<PlayerMode> OnFormChange;
+    public event Action OnEnemyDead;
+    public event Action OnRoundEnd;
+    public event Action<bool> OnGamePaused;
     #endregion
 
     #region Callers
-    public void ChangeForm(bool isShip)
+    public void ChangeForm(PlayerMode newMode)
     {
-        OnFormChange?.Invoke(isShip);
+        OnFormChange?.Invoke(newMode);
+    }
+
+    public void EnemyDead() {
+        OnEnemyDead?.Invoke();
+    }
+
+    public void RoundEnd() {
+        OnRoundEnd?.Invoke();
+    }
+
+    public void PauseGame(bool isPaused)
+    {
+        OnGamePaused?.Invoke(isPaused);
     }
     #endregion
 }

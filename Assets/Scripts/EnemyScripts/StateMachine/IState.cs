@@ -7,4 +7,6 @@ public interface IState
     void OnUpdate(StateController controller);
 
     void OnExit(StateController controller);
+
+    string GetName();
 }

@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Runtime.InteropServices;
 using UnityEngine;
-using FMODUnity;
 
 public class Shoot : Attack
 {
@@ -17,6 +15,7 @@ public class Shoot : Attack
     /// <param name="lifetime">Projectile lifetime in seconds</param>
     /// <param name="sfx">Sound effect for the attack</param>
     /// <param name="piercing">Whether the projectile can pierce Entities</param>
+    /// <param name="homing">Whether the projectile can home onto Entities
     public Shoot(GameObject owner,
                   Damage damage,
                   float cooldown,
@@ -28,20 +27,95 @@ public class Shoot : Attack
         Lifetime = lifetime;
         Piercing = piercing;
         AttackType = Type.RANGED;
+        entity = Owner.GetComponent<Entity>();
+
+        if (Owner.TryGetComponent<Animator>(out Animator a))
+        {
+            Animator = a;
+        }
     }
 
-    public override IEnumerator Execute(Vector3 origin, Vector3 target)
+    private void CreateProjectile(Vector3 o, Vector3 t)
     {
         GameManager.Instance.ProjectileManager.CreateProjectile(Owner,
                                                                 Damage,
                                                                 TravelSpeed,
                                                                 Lifetime,
                                                                 Piercing,
+                                                                false,
                                                                 sizeScalar:2,
+                                                                o, t);
+    }
+
+    public override IEnumerator Execute(Vector3 origin, Vector3 target)
+    {
+        if (Animator)
+        {
+            if (entity.healthController.team == HealthOwner.Team.ENEMY)
+            {
+                TryTriggerAnimation("triggerShoot");
+
+                LastExecute = Time.time;
+                yield return new WaitWhile(AnimatorIsPlaying);
+            }
+        }
+
+        CreateProjectile(origin, target);
+        AudioManager.Instance.PlayPlayerShootSFX();
+        LastExecute = Time.time;
+        yield return new WaitForSeconds(0.06f);
+
+        // lol 
+        if (Doubling)
+        {
+            CreateProjectile(origin, target);
+            AudioManager.Instance.PlayPlayerShootSFX();
+            LastExecute = Time.time;
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+
+    public override IEnumerator StartCharge()
+    {
+        LastExecute = Time.time;
+        yield return new WaitForEndOfFrame();
+    }
+
+    public override IEnumerator EndCharge(Vector3 origin, Vector3 target)
+    {
+        int temp = Damage.Amount;
+        int size = 2 + (int)(Time.time - LastExecute);
+        Damage.Amount += Damage.Amount * (int)(Time.time - LastExecute);
+        GameManager.Instance.ProjectileManager.CreateProjectile(Owner,
+                                                                Damage,
+                                                                TravelSpeed,
+                                                                Lifetime,
+                                                                Piercing,
+                                                                false,
+                                                                sizeScalar: size,
                                                                 origin, target);
         AudioManager.Instance.PlayPlayerShootSFX();
 
         LastExecute = Time.time;
+
+
+        if (Doubling)
+        {
+            yield return new WaitForSeconds(0.06f);
+            GameManager.Instance.ProjectileManager.CreateProjectile(Owner,
+                                                                    Damage,
+                                                                    TravelSpeed,
+                                                                    Lifetime,
+                                                                    Piercing,
+                                                                    false,
+                                                                    sizeScalar: size,
+                                                                    origin, target);
+            AudioManager.Instance.PlayPlayerShootSFX();
+            LastExecute = Time.time;
+            yield return new WaitForSeconds(0.01f);
+        }
+        Damage.Amount = temp;
         yield return new WaitForEndOfFrame();
     }
 }

@@ -1,31 +1,55 @@
+using System.Collections;
 using System.Collections.Specialized;
-using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private float spawnTimer = 0f;
-    private float spawnInterval = 8f;
-    public GameObject enemyPrefab;
+
+    private SpawnerManager spawnerManager;
 
 
-    void Start()
+    private void Start()
     {
-        UnityEngine.Debug.Log(transform.childCount);
-        foreach(Transform child in transform)
-        {
-            UnityEngine.Debug.Log(child.transform.position);
+        spawnerManager = SpawnerManager.Instance;
+        spawnerManager.UpdateUI();
+        StartCoroutine(SpawnCoroutine());
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    private IEnumerator SpawnCoroutine()
+    {
+        while (spawnerManager.ContinueSpawning()) {
+            SpawnEnemy();
+
+            yield return new WaitForSeconds(spawnerManager.spawnInterval);
+            spawnerManager.elapsedTime += spawnerManager.spawnInterval;
         }
     }
 
-    void Update()
+    private void Update()
     {
-        spawnTimer += Time.deltaTime;
-        if (spawnTimer >= spawnInterval)
+        if (spawnerManager == null) {return;}
+
+        if (spawnerManager.roundType == RoundType.EXTERMINATE)
         {
-            SpawnEnemy();
-            spawnTimer = 0;
+            return;
+        }
+        spawnerManager.elapsedTime += Time.deltaTime;
+        spawnerManager.UpdateUI();
+
+        if (spawnerManager.elapsedTime > spawnerManager.roundTime)
+        {
+            EventBus.Instance.RoundEnd();
         }
     }
 
@@ -33,13 +57,12 @@ public class EnemySpawner : MonoBehaviour
     {
         foreach(Transform child in transform)
         {
-            if (child.transform.childCount == 0)
+            if (spawnerManager.ContinueSpawning())
             {
-                UnityEngine.Debug.Log("spawning enemy");
-                GameObject enemy = Instantiate(enemyPrefab, child.transform.position, child.transform.rotation);
+                GameObject enemy = Instantiate(spawnerManager.GetNextEnemy(), child.transform.position, child.transform.rotation);
                 enemy.transform.SetParent(child.transform);
-            } else {
-                UnityEngine.Debug.Log("enemy not dead");
+                spawnerManager.enemiesAlive += 1;
+                spawnerManager.numEnemiesSpawned += 1;
             }
         }
     }
